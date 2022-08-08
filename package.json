@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "API for Vietnamese Football League",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
@@ -20,7 +20,11 @@
   },
   "homepage": "https://github.com/kaquoc/V_League#readme",
   "dependencies": {
-    "express": "^4.18.1", 
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
     "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }

@@ -12,7 +12,8 @@ app.use(cors(corsOption));
 
 app.use(json()); //middleware body parser
 
-//reponse to a GET request
+//reponse to a HTTP GET request
+//retrieve table data from table "mock_data" that we created using Postgres.
 app.get("/mock_data", async (req,res) => {
     try {
         const board = await pool.query("SELECT * FROM mock_data");

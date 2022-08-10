@@ -5,6 +5,8 @@ import pg from 'pg';
 const {Pool} = pg;
 
 //dependent on where we are running the server: either Heroku or local
+
+//currently running local with PostGres user kaka and database vleague with table mock_data
 const poolConfig = {
     user: "kaka",
     password: '',

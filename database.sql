@@ -22,4 +22,3 @@ insert into standings (team_name, match_played, points,wins, draw, lose) values 
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Sai Gon', 10,7,1,4,5);
 
 
-SELECT * FROM standings;

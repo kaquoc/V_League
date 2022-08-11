@@ -1,28 +1,25 @@
-create table MOCK_DATA (
-	id INT,
-	team_name VARCHAR(50),
-	points INT
+create table standings (
+	id BIGSERIAL PRIMARY KEY, 
+	team_name VARCHAR(50) NOT NULL,
+	match_played INT,
+	points INT,
+	wins INT,
+	draw INT,
+	lose INT
 );
-insert into MOCK_DATA (id, team_name, points) values (1, 'Octreotide acetate', 3);
-insert into MOCK_DATA (id, team_name, points) values (2, 'Norepinephrine', 46);
-insert into MOCK_DATA (id, team_name, points) values (3, 'PHENYTOIN SODIUM', 93);
-insert into MOCK_DATA (id, team_name, points) values (4, 'Degree Women Sheer Powder', 16);
-insert into MOCK_DATA (id, team_name, points) values (5, 'fexofenadine hydrochloride', 63);
-insert into MOCK_DATA (id, team_name, points) values (6, 'Doxepin Hydrochloride', 53);
-insert into MOCK_DATA (id, team_name, points) values (7, 'Solu-Medrol', 48);
-insert into MOCK_DATA (id, team_name, points) values (8, 'Furosemide', 74);
-insert into MOCK_DATA (id, team_name, points) values (9, 'PHOSPHORUS', 15);
-insert into MOCK_DATA (id, team_name, points) values (10, 'ALMACONE DOUBLE STRENGTH', 11);
-insert into MOCK_DATA (id, team_name, points) values (11, 'Ceramide Lift And Firm Makeup Broad Spectrum Sunscreen SPF 15 Cocoa', 5);
-insert into MOCK_DATA (id, team_name, points) values (12, 'Dilantin', 76);
-insert into MOCK_DATA (id, team_name, points) values (13, 'Robaxin', 63);
-insert into MOCK_DATA (id, team_name, points) values (14, 'Phentermine hydrochloride', 95);
-insert into MOCK_DATA (id, team_name, points) values (15, 'Fungus Fighter', 17);
-insert into MOCK_DATA (id, team_name, points) values (16, 'Leader Gas Relief', 91);
-insert into MOCK_DATA (id, team_name, points) values (17, 'Nascobal', 84);
-insert into MOCK_DATA (id, team_name, points) values (18, 'Synthroid', 74);
-insert into MOCK_DATA (id, team_name, points) values (19, 'Gentamicin Sulfate in Sodium Chloride', 90);
-insert into MOCK_DATA (id, team_name, points) values (20, 'G-Supress DX', 36);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Hanoi', 10,23,7,2,1);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Hoang Anh Gia Lai', 10,19,5,4,1);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Song Lam Nghe An', 10,17,5,2,3);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Hai Phong', 11,17,5,2,4);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('SHB-Da Nang', 11,16,4,2,4);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Binh Dinh', 10,14,4,2,4);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Viettel', 10,13,4,1,5);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Thanh Hoa', 10,12,3,3,3);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Becamex Binh Duonh', 10,12,3,3,4);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Hong Linh Ha Tinh', 10,11,3,2,5);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Nam Dinh', 10,10,2,2,4);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Ho Chi Minh', 10,9,2,3,5);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Sai Gon', 10,7,1,4,5);
 
 
-SELECT * FROM teams;
+SELECT * FROM standings;

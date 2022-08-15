@@ -14,5 +14,9 @@ local server: http://localhost:3000/
 
 - No front-end so no React
 
+## GET command
+GET/standings - return current league standings. Standings will show team names, points, match played, wins, draws, loses.
+
+GET
 
 

@@ -17,12 +17,13 @@ app.use(json()); //middleware body parser
 
 app.get("/standings", async (req,res) => {
     try {
-        const board = await pool.query("SELECT * FROM standings");
+        const board = await pool.query("SELECT team_name FROM standings ORDER BY points DESC");
         res.json(board.rows);
     } catch (error) {
         console.log(error.message);
     }
 })
+
 
 app.listen(PORT, () => {
     console.log("server is listen on port: ${PORT}")

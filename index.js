@@ -15,9 +15,18 @@ app.use(json()); //middleware body parser
 //reponse to a HTTP GET request
 //retrieve table data from table "mock_data" that we created using Postgres.
 
-app.get("/standings", async (req,res) => {
+app.get("/STANDINGS", async (req,res) => {
     try {
-        const board = await pool.query("SELECT team_name FROM standings ORDER BY points DESC");
+        const board = await pool.query("SELECT * FROM standings");
+        res.json(board.rows);
+    } catch (error) {
+        console.log(error.message);
+    }
+})
+
+app.get("/hanoi", async (req,res) => {
+    try {
+        const board = await pool.query("SELECT team_name FROM standings WHERE team_name =Hanoi");
         res.json(board.rows);
     } catch (error) {
         console.log(error.message);

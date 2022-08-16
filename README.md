@@ -19,4 +19,7 @@ GET/standings - return current league standings. Standings will show team names,
 
 GET
 
+### Using Heroku Postgres
+connect using credentials listed on Heroku app.
+
 

@@ -20,7 +20,9 @@ const poolConfig2 = {
 
 //config to run with Heroku Postgres. 
 /**Current version: localhost server with HerokuPostgres
-        for simplicity, we ommitted 
+        rejectUnauthorized: true  -- will verified the server certificate against a list of supplied CAs
+                                    error will be presented when verification fail
+        rejectUnauthorizedL false -- will ignore server's verification. 
  */
 const poolConfig = {
     connectionString: database_url,

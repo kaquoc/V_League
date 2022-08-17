@@ -13,9 +13,9 @@ app.use(cors(corsOption));
 
 app.use(json()); //middleware body parser
 
-//reponse to a HTTP GET request
-//retrieve table data from table "mock_data" that we created using Postgres.
 
+//reponse to a HTTP GET request
+//retrieve table data from table "standings" that we created using HerokuPostgres.
 app.get("/standings", async (req,res) => {
     try {
         const board = await pool.query("SELECT * FROM standings");
@@ -28,7 +28,7 @@ app.get("/standings", async (req,res) => {
 
 app.get("/hanoi", async (req,res) => {
     try {
-        const board = await pool.query("SELECT team_name FROM standings WHERE team_name =Hanoi");
+        const board = await pool.query("SELECT * FROM standings WHERE team_name = 'Hanoi' ");
         res.json(board.rows);
     } catch (error) {
         console.log(error.message);

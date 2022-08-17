@@ -19,8 +19,9 @@ const poolConfig2 = {
 };
 
 //config to run with Heroku Postgres. 
-
-
+/**Current version: localhost server with HerokuPostgres
+        for simplicity, we ommitted 
+ */
 const poolConfig = {
     connectionString: database_url,
     //HerokuPostgres requires SSL connection to be made. setting rejectUnauthorized to false means we are bypassing this

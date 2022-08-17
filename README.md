@@ -37,4 +37,4 @@ fork: when you create your own copy of the code on your local machine and in you
 
 branch: working on branch means you are sharing with other user. When you push to the branch, the other user can see as well.
 
-
+A test branch call 'dev', where collaborator would work on before submitting a pull request

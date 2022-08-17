@@ -18,7 +18,7 @@ app.use(json()); //middleware body parser
 //retrieve table data from table "standings" that we created using HerokuPostgres.
 app.get("/standings", async (req,res) => {
     try {
-        const board = await pool.query("SELECT * FROM standings ORDER BY points ASC");
+        const board = await pool.query("SELECT * FROM standings ORDER BY points DESC");
         res.json(board.rows);
     } catch (error) {
         console.log(error.message);

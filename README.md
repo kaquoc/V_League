@@ -23,3 +23,18 @@ GET
 connect using credentials listed on Heroku app.
 
 
+### GitHub Branches
+
+Currently only have one 'main' branch as the master working branch.
+
+In collaboration with other people, I will need other branches.
+
+Its time to branch out.
+
+clarification: fork vs branch
+
+fork: when you create your own copy of the code on your local machine and in your GitHub repository. Its yours.
+
+branch: working on branch means you are sharing with other user. When you push to the branch, the other user can see as well.
+
+

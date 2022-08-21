@@ -41,5 +41,3 @@ A test branch call 'dev', where collaborator would work on before submitting a p
 
 Features will be work on dev branch, once consider stable, it can be merge onto the main branch.
 
-
-UPDATEOQEHOIQWJHEOIQWHEOJQOIEO QOIW

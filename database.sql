@@ -1,12 +1,12 @@
 create table standings (
-	team_id BIGSERIAL PRIMARY KEY, 
-	team_name VARCHAR(50) NOT NULL,
+	team_name VARCHAR(50) NOT NULL UNIQUE PRIMARY KEY,
 	match_played INT,
 	points INT,
 	wins INT,
 	draw INT,
 	lose INT
 );
+
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Hanoi', 10,23,7,2,1);
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Hoang Anh Gia Lai', 10,19,5,4,1);
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Song Lam Nghe An', 10,17,5,2,3);
@@ -28,11 +28,11 @@ insert into standings (team_name, match_played, points,wins, draw, lose) values 
 create table players (
 	player_id BIGSERIAL, 
 	player_name VARCHAR(50),
-	team_id INT,
+	team_name VARCHAR(50),
 	appearance INT,
 	nationality VARCHAR(50),
 	goals INT,
 	assists INT,
 	position VARCHAR(3),
-	FOREIGN KEY (team_id) REFERENCES standings(id)
+	FOREIGN KEY (team_name) REFERENCES standings(team_name)
 );

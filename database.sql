@@ -1,5 +1,5 @@
 create table standings (
-	id BIGSERIAL PRIMARY KEY, 
+	team_id BIGSERIAL PRIMARY KEY, 
 	team_name VARCHAR(50) NOT NULL,
 	match_played INT,
 	points INT,
@@ -22,3 +22,17 @@ insert into standings (team_name, match_played, points,wins, draw, lose) values 
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Sai Gon', 10,7,1,4,5);
 
 
+
+
+
+create table players (
+	player_id BIGSERIAL, 
+	player_name VARCHAR(50),
+	team_id INT,
+	appearance INT,
+	nationality VARCHAR(50),
+	goals INT,
+	assists INT,
+	position VARCHAR(3),
+	FOREIGN KEY (team_id) REFERENCES standings(id)
+);

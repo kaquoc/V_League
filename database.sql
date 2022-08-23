@@ -23,8 +23,6 @@ insert into standings (team_name, match_played, points,wins, draw, lose) values 
 
 
 
-
-
 create table players (
 	player_id BIGSERIAL, 
 	player_name VARCHAR(50),
@@ -36,3 +34,6 @@ create table players (
 	position VARCHAR(3),
 	FOREIGN KEY (team_name) REFERENCES standings(team_name)
 );
+
+
+insert into players (player_name,team_name,appearance,nationality,goals,assists,position) values ('', 10,23,7,2,1);

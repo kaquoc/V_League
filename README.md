@@ -39,19 +39,22 @@ branch: working on branch means you are sharing with other user. When you push t
 
 A test branch call 'dev', where collaborator would work on before submitting a pull request
 
-Features will be work on dev branch, once consider stable, it can be merge onto the main branch.
+Features will be work on dev branch, once consider stable, it can be merge onto the main branch by creating a pull request. 
+
+### API GET command
+
+    /GET/standings       - return the current standing table sorted by points
+
+    /GET/teams           - return the teams in alphabetical order
+
+    /GET/players         - return list of all players currently registered in the league
+
+    /GET/players/"team_name"     - return list of all players currently in "team_name"
+
+    /GET/fixtures        - return all fixtures in the league for 2022/2023 season
+
+    
 
 
-### Ubuntu Command Line for Setting Up PostgresSQL
 
-Updating current repository for Ubuntu 
-    sudo apt-get upgrade
 
-Installing postgresSQL for Ubuntu
-    sudo apt-get install postgresql postgresql-contrib
-
-View action that can be done
-    service postgresql
-
-Setting postgresql to be online
-    sudo /etc/init.d/postgresql start

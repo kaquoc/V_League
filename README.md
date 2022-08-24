@@ -14,14 +14,6 @@ local server: http://localhost:3000/
 
 - No front-end so no React
 
-## GET command
-GET/standings - return current league standings. Standings will show team names, points, match played, wins, draws, loses.
-
-GET
-
-### Using Heroku Postgres
-connect using credentials listed on Heroku app.
-
 
 ### GitHub Branches
 
@@ -39,4 +31,22 @@ branch: working on branch means you are sharing with other user. When you push t
 
 A test branch call 'dev', where collaborator would work on before submitting a pull request
 
-Features will be work on dev branch, once consider stable, it can be merge onto the main branch.
+Features will be work on dev branch, once consider stable, it can be merge onto the main branch by creating a pull request. 
+
+### API GET command
+
+    /GET/standings       - return the current standing table sorted by points
+
+    /GET/teams           - return the teams in alphabetical order
+
+    /GET/players         - return list of all players currently registered in the league
+
+    /GET/players/"team_name"     - return list of all players currently in "team_name"
+
+    /GET/fixtures        - return all fixtures in the league for 2022/2023 season
+
+    
+
+
+
+

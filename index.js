@@ -26,9 +26,9 @@ app.get("/standings", async (req,res) => {
 })
 
 
-app.get("/team_names", async (req,res) => {
+app.get("/players/Hanoi", async (req,res) => {
     try {
-        const board = await pool.query("SELECT * FROM standings WHERE team_name = 'Hanoi' ");
+        const board = await pool.query("SELECT * FROM players WHERE team_name = 'Hanoi' ");
         res.json(board.rows);
     } catch (error) {
         console.log(error.message);

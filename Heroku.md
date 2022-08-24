@@ -28,3 +28,6 @@ Setting postgresql to be online
     sudo /etc/init.d/postgresql start
 
 
+### Using Heroku Postgres
+connect using credentials listed on Heroku app.
+

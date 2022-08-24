@@ -1,4 +1,4 @@
-import express, {json} from "express";
+import express, {json, raw} from "express";
 import cors from 'cors'; //communication between express and server
 
 import pool from './db.js' //database
@@ -11,7 +11,8 @@ const corsOption = {origin: process.env.URL || '*'}; //anyone can use our API
 
 app.use(cors(corsOption));
 
-app.use(json()); //middleware body parser
+
+app.use(raw()); //middleware body parser, use to process incoming Request into JSON String
 
 
 //reponse to a HTTP GET request
@@ -25,15 +26,11 @@ app.get("/standings", async (req,res) => {
     }
 })
 
-
-app.get("/players/Hanoi", async (req,res) => {
-    try {
-        const board = await pool.query("SELECT * FROM players WHERE team_name = 'Hanoi' ");
-        res.json(board.rows);
-    } catch (error) {
-        console.log(error.message);
-    }
+app.get("/test", (reg,res) => {
+    console.log(reg.body);
 })
+
+
 
 
 app.listen(PORT, () => {

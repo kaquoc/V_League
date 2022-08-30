@@ -1,3 +1,12 @@
+/*Website to get players, teams data
+Players data:
+	- https://www.transfermarkt.us/v-league-1/startseite/wettbewerb/VIE1
+	- https://www.flashscore.com/team/hanoi-fc/x2LRDuqP/squad/
+*/
+
+
+
+
 CREATE TABLE standings (
 	team_name VARCHAR(50) NOT NULL UNIQUE PRIMARY KEY,
 	match_played INT,

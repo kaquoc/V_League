@@ -9,8 +9,7 @@
  */
 import pool from './db.js';
 
-/** How to update player
- *  Player name -> find, 
+/** Update player goal count: Provide player name and number of goals score to update.
 */
 const updatePlayer_goal = async (player_name, goals) => {
     const query = `UPDATE "players" 
@@ -30,7 +29,7 @@ const updatePlayer_goal = async (player_name, goals) => {
 /**increament a player appearance 1 at a time */
 const updatePlayer_appearance = async (player_name) => {
     const query = `UPDATE "players" 
-                   SET "appearance" = appearance - 1
+                   SET "appearance" = appearance + 1
                    WHERE "player_name" = $1`;
     try {
         await pool.connect();          // gets connection
@@ -43,11 +42,57 @@ const updatePlayer_appearance = async (player_name) => {
         await pool.end();              // closes connection
     }
 };
-
-
-
-updatePlayer_appearance('Pham Tuan Hai').then(result => {  // userName, userRole, userId
-    if (result) {
-        console.log('player updated');
+/**update player kit number */
+const updatePlayer_kit = async (player_name,kit_num) => {
+    const query = `UPDATE "players" 
+                   SET "kit_number" = $2
+                   WHERE "player_name" = $1`;
+    try {
+        await pool.connect();          // gets connection
+        await pool.query(query, [player_name,kit_num]); // sends queries
+        return true;
+    } catch (error) {
+        console.error(error.stack);
+        return false;
+    } finally {
+        await pool.end();              // closes connection
     }
-});
+};
+
+const updateMatchResult = async (home_team,score1,away_team,score2) => {
+    let query = '';
+    let supply = [];
+    if (score1 > score2){ //home team wins
+        query = `UPDATE "standings" 
+                   SET "points" = points + 3
+                   WHERE "team_name" = $1`;
+        supply = [home_team];
+    } else if (score2 > score1){//away team wins
+        query = `UPDATE "standings" 
+                   SET "points" = points + 3
+                   WHERE "team_name" = $1`;
+        supply = [away_team];
+    }else{ //draw
+        query = 'UPDATE "standings" SET "points" = points + 1 WHERE "team_name" = $1 OR "team_name" = $2';
+        supply = [home_team,away_team];
+    }
+   
+    try {
+        await pool.connect();          // gets connection
+        await pool.query(query, supply); // sends queries
+        return true;
+    } catch (error) {
+        console.error(error.stack);
+        return false;
+    } finally {
+        await pool.end();              // closes connection
+    }
+};
+
+
+
+updateMatchResult('Hanoi',1, 'Sai Gon',1).then(result => {
+    if (result){
+        console.log("update success");
+    }
+})

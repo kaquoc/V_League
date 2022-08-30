@@ -26,12 +26,14 @@ app.get("/standings", async (req,res) => {
     }
 })
 
-app.get("/test", (reg,res) => {
-    console.log(reg.body);
+app.get("/players", async (reg,res) => {
+    try {
+        const board = await pool.query("SELECT * FROM players ORDER BY kit_number DESC");
+        res.json(board.rows);
+    } catch (error) {
+        console.log(error.message);
+    }
 })
-
-
-
 
 app.listen(PORT, () => {
     console.log("server is listen on port: " + PORT);

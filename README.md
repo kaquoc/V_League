@@ -45,6 +45,11 @@ Features will be work on dev branch, once consider stable, it can be merge onto 
 
     /GET/fixtures        - return all fixtures in the league for 2022/2023 season
 
+
+### Database
+Our data is hosted on Heroku Postgres. 
+
+Data is update manual on a per-game basis. Meaning we update results after each round. This should update other dependancies as well.
     
 
 

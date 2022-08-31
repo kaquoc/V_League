@@ -33,8 +33,9 @@ insert into standings (team_name, match_played, points,wins, draw, lose) values 
 
 
 CREATE TABLE players (
-	kit_number INT, 
+	player_id BIGSERIAL UNIQUE PRIMARY KEY,
 	player_name VARCHAR(50),
+	kit_number INT, 
 	team_name VARCHAR(50),
 	appearance INT,
 	goals INT,
@@ -93,5 +94,9 @@ INSERT INTO players (kit_number, player_name,team_name,appearance,goals,position
 											VALUES (89,'Nguyen Van Tung', 'Hanoi',5,0,'CF',20);
 INSERT INTO players (kit_number, player_name,team_name,appearance,goals,position, age) 
 											VALUES (9,'Pham Tuan Hai', 'Hanoi',13,3,'CF',24);
+INSERT INTO players (kit_number, player_name,team_name,appearance,goals,position, age) 
+											VALUES (99,'Siladji Vladimir', 'Hanoi',12,4,'CF',29);
+
+/*Becamex Binh Duonh*/
 INSERT INTO players (kit_number, player_name,team_name,appearance,goals,position, age) 
 											VALUES (99,'Siladji Vladimir', 'Hanoi',12,4,'CF',29);

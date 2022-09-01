@@ -106,6 +106,21 @@ const updateMatchResult = async (home_team,score1,away_team,score2) => {
     }
 };
 
+/**function use to reset all players stat (except player_id,player_name,kit number, age, position and team_name) */
+const resetPlayers = async() =>{
+    const query = 'UPDATE "players" SET "appearance" = 0, "goals" = 0';
+    try {
+        await pool.connect();          // gets connection
+        await pool.query(query, []); // sends queries
+        return true;
+    } catch (error) {
+        console.error(error.stack);
+        return false;
+    } finally {
+        await pool.end();              // closes connection
+    }
+}
+
 
 
 updateMatchResult('Hanoi',1, 'Sai Gon',2).then(result => {

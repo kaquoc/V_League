@@ -120,6 +120,19 @@ const resetPlayers = async() =>{
         await pool.end();              // closes connection
     }
 }
+const resetStandings = async() =>{
+    const query = 'UPDATE "standings" SET "match_played" = 0, "points" = 0, "wins"=0, "draw" = 0, "lose" = 0';
+    try{
+        await pool.connect();
+        await pool.query(query,[]);
+        return true;
+    }catch (error){
+        console.log(error.stack);
+        return false;
+    }finally {
+        await pool.end();
+    }
+}
 
 
 

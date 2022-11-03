@@ -1,4 +1,6 @@
-/**script for generating random team for testing
+/** TESTING FILE
+ * 
+ * script for generating random team for testing
  * Because of Referential Integrity, we need to have a team
  * in Standings call Test Team
  * 

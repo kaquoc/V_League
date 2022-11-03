@@ -1,14 +1,16 @@
-/**File for updating database after each round
- * What needs to change after each round:
- *     - Standings table
- *          - team's point, wins, loses, draw, match_played
- *     - Players table
- *          - kit_number, player_name, team_name, appearance, goals, position, age.
+/**File for updating database
  * 
- * 
+ * Any functions that changes or update the database in put here
  */
 import pool from './db.js';
 import insert_statement from './generator.js';
+
+
+//CSV file parser package
+import {parse} from "csv-parse";
+import * as fs from "fs";
+
+
 
 /** Update player goal count: Provide player name and number of goals score to update.
 */
@@ -121,6 +123,7 @@ const resetPlayers = async() =>{
         await pool.end();              // closes connection
     }
 }
+/**function use to reset team points, match_played, goals, wins, draw, lose to 0 */
 const resetStandings = async() =>{
     const query = 'UPDATE "standings" SET "match_played" = 0, "points" = 0, "wins"=0, "draw" = 0, "lose" = 0';
     try{
@@ -136,7 +139,7 @@ const resetStandings = async() =>{
 }
 
 
-/**Insert a random generated team for testing purposes */
+/**Generate a random team name "Test Team" to be insert into database, team will have 22 random players*/
 const insert_rand_team = async () => {
     await pool.connect();  
     for (let i = 0; i < 22; i++){
@@ -155,3 +158,38 @@ const insert_rand_team = async () => {
     await pool.end();              
 };
 
+
+
+/** 
+ * Parse a team csv file and insert the team players into TABLE 'players'
+ * parameter: file path to csv file
+ * 
+ * https://sebhastian.com/read-csv-javascript/
+ * 
+ */
+async function parse_csv(path){
+    await pool.connect(); 
+    fs.createReadStream(path);
+    fs.createReadStream(path).pipe(parse({delimiter: ",", from_line: 2})).on("data",async function(row){
+        console.log(row);
+        const query = "INSERT INTO players (kit_number, player_name,team_name,appearance,goals,position, age) VALUES ("+row+")";
+        try {
+            // gets connection
+            await pool.query(query, []); // sends queries
+    
+        } catch (error) {
+                console.error(error.stack);
+                console.log("error");
+                return false;
+        } 
+    }).on("error", function (error){
+        console.log(error.message);
+    }).on("end",async function (){
+        await pool.end();  
+        console.log("finised");
+        return;
+    })
+}
+
+let file = "./HongLinhHaTinh.csv";
+parse_csv(file);

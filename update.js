@@ -3,7 +3,7 @@
  * Any functions that changes or update the database in put here
  */
 import pool from './db.js';
-import insert_statement from './generator.js';
+import insert_statement from './Test.js';
 
 
 //CSV file parser package
@@ -168,23 +168,18 @@ const insert_rand_team = async () => {
  * 
  */
 async function parse_csv(path){
+    const data = [];
     await pool.connect(); 
     fs.createReadStream(path);
-    fs.createReadStream(path).pipe(parse({delimiter: ",", from_line: 2})).on("data",async function(row){
-        console.log(row);
-        const query = "INSERT INTO players (kit_number, player_name,team_name,appearance,goals,position, age) VALUES ("+row+")";
-        try {
-            // gets connection
-            await pool.query(query, []); // sends queries
-    
-        } catch (error) {
-                console.error(error.stack);
-                console.log("error");
-                return false;
-        } 
+    fs.createReadStream(path).pipe(parse(
+        {delimiter: ",", columns: true,ltrim: true} //first column is column names, rest is values. and trim whitespaces
+        )).on("data",function(row){
+        data.push(row);
     }).on("error", function (error){
         console.log(error.message);
+        return;
     }).on("end",async function (){
+        console.log(data);
         await pool.end();  
         console.log("finised");
         return;

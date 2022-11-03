@@ -8,6 +8,7 @@
  * 
  */
 import pool from './db.js';
+import insert_statement from './generator.js';
 
 /** Update player goal count: Provide player name and number of goals score to update.
 */
@@ -135,9 +136,22 @@ const resetStandings = async() =>{
 }
 
 
-
-updateMatchResult('Hanoi',1, 'Sai Gon',2).then(result => {
-    if (result){
-        console.log("update success");
+/**Insert a random generated team for testing purposes */
+const insert_rand_team = async () => {
+    await pool.connect();  
+    for (let i = 0; i < 22; i++){
+        console.log(i);
+        const query = insert_statement();
+        try {
+                    // gets connection
+            await pool.query(query, []); // sends queries
+            
+        } catch (error) {
+            console.error(error.stack);
+            console.log("error");
+            return false;
+        } 
     }
-})
+    await pool.end();              
+};
+

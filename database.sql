@@ -30,6 +30,7 @@ insert into standings (team_name, match_played, points,wins, draw, lose) values 
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Ho Chi Minh', 10,9,2,3,5);
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Sai Gon', 10,7,1,4,5);
 
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Test Team', 10,0,0,0,0);
 
 
 CREATE TABLE players (

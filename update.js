@@ -169,7 +169,6 @@ const insert_rand_team = async () => {
  */
 async function parse_csv(path){
     const data = [];
-    await pool.connect(); 
     fs.createReadStream(path);
     fs.createReadStream(path).pipe(parse(
         {delimiter: ",", columns: true,ltrim: true} //first column is column names, rest is values. and trim whitespaces
@@ -180,7 +179,7 @@ async function parse_csv(path){
         return;
     }).on("end",async function (){
         console.log(data);
-        await pool.end();  
+        console.log("calling pool end");  
         console.log("finised");
         return;
     })

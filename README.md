@@ -49,11 +49,13 @@ Features will be work on dev branch, once consider stable, it can be merge onto 
 
 
 ### Database
-Our data is hosted on Heroku Postgres. 
+~~Our data is hosted on Heroku Postgres.~~
 
-Data is update manual on a per-game basis. Meaning we update results after each round. This should update other dependancies as well.
+~~Data is update manual on a per-game basis. Meaning we update results after each round. This should update other dependancies as well.~~
     
 
+UPDATE 12/23/2022:
 
+Heroku no longer allow free Postgres database, database currently being move to another storage option.
 
 

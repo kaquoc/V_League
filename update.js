@@ -178,12 +178,19 @@ async function parse_csv(path){
         console.log(error.message);
         return;
     }).on("end",async function (){
-        console.log(data);
+        /**create query an insert*/
+        insert_csv(data);
         console.log("calling pool end");  
         console.log("finised");
         return;
     })
 }
-
+async function insert_csv(data){
+    await pool.connect();  
+    for (let i = 0; i < data.length; i++){
+        console.log(data[i]);
+    }
+    await pool.end();    
+}
 let file = "./HongLinhHaTinh.csv";
 parse_csv(file);

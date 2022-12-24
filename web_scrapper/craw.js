@@ -1,8 +1,23 @@
-
+/**   WEB SCRAPPER
+ * Script to scrape data from VPF website to gather team informations
+ * 
+ * Using Axios to make HTTP requests from node.js. 
+ * Support Promose API native to JS ES6
+ * 
+ * Cheerio and jQuery to traverse DOM tree of HTML page and extract
+ * information.
+ * 
+ */
 import axios from 'axios';
 import cheerio from 'cheerio';
 
+/** CONSTANT VARIABLE */
 const team_url = 'https://vpf.vn/team/hong-linh-ha-tinh/?sid=54122';
+const TEAM= "Hong Linh Ha Tinh"
+const CURRENT_YEAR = 2022;
+
+
+/**SCRAPING FUNCTIONS */
 const get_names = async () => {
     try{
         const {data} = await axios.get(team_url);
@@ -90,13 +105,34 @@ const get_goals = async () => {
         throw error;
     }
 }
+const get_age = async () => {
+    try{
+        const {data} = await axios.get(team_url);
+        const $ = cheerio.load(data);
+        const post = [];
+        $('#jstable_plz > tbody > tr > td:nth-child(6)').each((_idx, el) => {
+            const post1 = $(el).text().replace(/  /g,'').replace(/\n/g,'');
+            let split = post1.split("-");
+            const age = CURRENT_YEAR - parseInt(split[2]);
+            post.push(age);
+        })
+        return post;
+    }catch (error){
+        throw error;
+    }
+}
+
 const export_csv = async () =>{
     const name = await get_names();
     const kit_nums = await get_kit_number();
     const pos = await get_position();
+    const goals = await get_goals();
+    const ages = await get_age();
+    let rows = [];
+    console.log("player_name,kit_number,team_name,appearance,goals,positon,age");
     for (let i = 0; i < name.length;i++){
         let res = [];
-        res.push(name[i],kit_nums[i],pos[i]);
+        res.push(name[i],kit_nums[i],"Hong Linh Ha Tinh",'0', goals[i],pos[i],ages[i]);
         console.log(res);
     }
 

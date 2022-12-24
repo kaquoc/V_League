@@ -1,0 +1,31 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Nguyễn Danh Minh Quang,5,Hong Linh Ha Tinh,0,0,CB,18
+Ngô Xuân Toàn,6,Hong Linh Ha Tinh,0,0,CM,29
+Đinh Thanh Trung,7,Hong Linh Ha Tinh,0,1,CM,34
+Trần Phi Hà,8,Hong Linh Ha Tinh,0,1,CM,26
+Trần Phi Sơn,10,Hong Linh Ha Tinh,0,0,CM,30
+Paollo Madeira Oliveira,9,Hong Linh Ha Tinh,0,8,ST,26
+Nguyễn Văn Hiệp,11,Hong Linh Ha Tinh,0,0,CM,28
+Đào Nhật Minh,14,Hong Linh Ha Tinh,0,0,CM,30
+Trương Trọng Sáng,15,Hong Linh Ha Tinh,0,0,CB,29
+Trần Đức Nam,3,Hong Linh Ha Tinh,0,0,ST,24
+Nguyễn Văn Đức,19,Hong Linh Ha Tinh,0,2,CM,26
+Trịnh Đức Lợi,18,Hong Linh Ha Tinh,0,0,CB,28
+Nguyễn Văn Huy,21,Hong Linh Ha Tinh,0,0,CB,24
+Nguyễn Xuân Hùng,20,Hong Linh Ha Tinh,0,1,CB,31
+Phan Đình Vũ Hải,23,Hong Linh Ha Tinh,0,0,GK,28
+Dương Tùng Lâm,24,Hong Linh Ha Tinh,0,0,GK,23
+Đào Văn Nam,17,Hong Linh Ha Tinh,0,2,CB,26
+Giang Trần Quách Tân,27,Hong Linh Ha Tinh,0,1,CM,30
+Hoàng Ngọc Hào,2,Hong Linh Ha Tinh,0,0,CB,28
+Janclesio Almeida Santos,4,Hong Linh Ha Tinh,0,7,CB,29
+Đinh Văn Hùng,29,Hong Linh Ha Tinh,0,0,CM,25
+Nguyễn Trọng Đại,77,Hong Linh Ha Tinh,0,0,CM,25
+Phạm Văn Long,16,Hong Linh Ha Tinh,0,1,CM,25
+Dương Văn Kiên,45,Hong Linh Ha Tinh,0,0,CB,19
+Dionatan Machado De Oliveira,92,Hong Linh Ha Tinh,0,1,CM,30
+Nguyễn Trung Học,88,Hong Linh Ha Tinh,0,1,CM,24
+Nguyễn Văn Hạnh,97,Hong Linh Ha Tinh,0,0,CB,24
+Trần Văn Công,37,Hong Linh Ha Tinh,0,0,CM,23
+Nguyễn Sỹ Nam,28,Hong Linh Ha Tinh,0,0,CB,29
+Dương Quang Tuấn,25,Hong Linh Ha Tinh,0,0,GK,26

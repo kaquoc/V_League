@@ -10,6 +10,7 @@
  */
 import axios from 'axios';
 import cheerio from 'cheerio';
+import fs from 'fs';
 
 /** CONSTANT VARIABLE */
 const team_url = 'https://vpf.vn/team/hong-linh-ha-tinh/?sid=54122';
@@ -128,13 +129,23 @@ const export_csv = async () =>{
     const pos = await get_position();
     const goals = await get_goals();
     const ages = await get_age();
-    let rows = [];
-    console.log("player_name,kit_number,team_name,appearance,goals,positon,age");
+    
+
+    //array to export into CSV file
+
+    let data = "player_name,kit_number,team_name,appearance,goals,positon,age\n";
+    const file = TEAM + '.txt'
+    fs.writeFile(file, data, (error) => {
+        if (error) throw error;
+    })
+
     for (let i = 0; i < name.length;i++){
-        let res = [];
-        res.push(name[i],kit_nums[i],"Hong Linh Ha Tinh",'0', goals[i],pos[i],ages[i]);
-        console.log(res);
+        data = name[i] + "," + kit_nums[i] + ',' + TEAM + ',' + '0' + ',' +  goals[i] + ',' + pos[i] +',' + ages[i] + '\n';
+        fs.appendFile(file, data, (error) => {
+            if (error) throw error;
+        })
     }
+
 
 }
 

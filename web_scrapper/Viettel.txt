@@ -1,0 +1,29 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Ngô Xuân Sơn,1,Viettel,0,0,GK,25
+Đinh Tuấn Tài,6,Viettel,0,0,CM,23
+Nguyễn Hữu Thắng,8,Viettel,0,1,CM,22
+Trần Ngọc Sơn,9,Viettel,0,0,CM,26
+Pedro Paulo Alves Vieira Dos Reis,10,Viettel,0,2,ST,28
+Abdumuminov Jakhongir,11,Viettel,0,2,CM,29
+Nguyễn Thanh Bình,3,Viettel,0,0,CB,22
+Hồ Khắc Ngọc,12,Viettel,0,0,CM,30
+Bùi Quang Khải,14,Viettel,0,0,CM,29
+Đoàn Huy Hoàng,13,Viettel,0,0,GK,19
+Nguyễn Đức Hoàng Minh,17,Viettel,0,4,CM,24
+Bùi Tiến Dũng,4,Viettel,0,1,CB,27
+Venancio Caique,7,Viettel,0,0,ST,29
+Nguyễn Xuân Kiên,15,Viettel,0,1,CM,22
+Cao Trần Hoàng Hùng,20,Viettel,0,0,CB,23
+Nguyễn Đức Chiến,21,Viettel,0,0,CM,24
+Quàng Thế Tài,25,Viettel,0,0,GK,26
+Trần Nguyên Mạnh,26,Viettel,0,0,GK,31
+Nguyễn Hoàng Đức,28,Viettel,0,6,ST,24
+Trần Danh Trung,19,Viettel,0,0,ST,22
+Dương Văn Hào,33,Viettel,0,1,ST,25
+Bùi Duy Thường,88,Viettel,0,0,CB,26
+Khuất Văn Khang,30,Viettel,0,0,ST,19
+Geovane Magno,94,Viettel,0,9,ST,28
+Nhâm Mạnh Dũng,99,Viettel,0,2,ST,22
+Trương Tiến Anh,29,Viettel,0,0,CM,23
+Nguyễn Sĩ Chiến,22,Viettel,0,0,ST,23
+Trần Hoàng Sơn,18,Viettel,0,0,ST,25

@@ -1,0 +1,35 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Nguyễn Trọng Huy,6,Becamex Binh Duong,0,0,CM,25
+Uông Ngọc Tiến,5,Becamex Binh Duong,0,0,CB,22
+Đoàn Tuấn Cảnh,9,Becamex Binh Duong,0,0,CM,24
+Teofilo Soares Eydison,10,Becamex Binh Duong,0,4,ST,34
+Trần Duy Khánh,12,Becamex Binh Duong,0,0,CM,25
+Bùi Vĩ Hào,11,Becamex Binh Duong,0,2,ST,19
+Nguyễn Sơn Hải,1,Becamex Binh Duong,0,0,GK,28
+Trần Hoàng Phương,14,Becamex Binh Duong,0,0,CM,28
+Nguyễn Thanh Thảo,3,Becamex Binh Duong,0,1,CB,27
+Nguyễn Thanh Long,7,Becamex Binh Duong,0,0,CB,29
+Trương Dũ Đạt,15,Becamex Binh Duong,0,2,CB,25
+Nguyễn Trần Việt Cường,16,Becamex Binh Duong,0,2,ST,22
+Lưu Tự Nhân,19,Becamex Binh Duong,0,0,CM,21
+Đoàn Văn Quý,20,Becamex Binh Duong,0,0,CB,24
+Nguyễn Anh Tài,8,Becamex Binh Duong,0,0,CB,26
+Nguyễn Tiến Linh,22,Becamex Binh Duong,0,9,ST,25
+Tống Anh Tỷ,17,Becamex Binh Duong,0,0,CM,25
+Hồ Sỹ Giáp,18,Becamex Binh Duong,0,2,ST,28
+Trần Hoàng Bảo,24,Becamex Binh Duong,0,0,CM,21
+Trần Đức Cường,25,Becamex Binh Duong,0,0,GK,37
+Nguyễn Trung Tín,27,Becamex Binh Duong,0,1,CB,31
+Tô Văn Vũ,28,Becamex Binh Duong,0,2,CM,29
+Võ Hoàng Minh Khoa,29,Becamex Binh Duong,0,0,CM,21
+Lê Văn Đại,33,Becamex Binh Duong,0,0,CB,26
+Nguyễn Thành Kiên,31,Becamex Binh Duong,0,0,CB,NaN
+Lê Vũ Quốc Nhật,26,Becamex Binh Duong,0,0,CM,26
+Adão Cruz Welington,37,Becamex Binh Duong,0,5,ST,NaN
+Nguyễn Đoàn Trung Nhân,34,Becamex Binh Duong,0,0,CM,24
+Phan Minh Thành,46,Becamex Binh Duong,0,0,GK,24
+Huỳnh Kesley Alves,77,Becamex Binh Duong,0,0,ST,41
+Lại Tuấn Vũ,30,Becamex Binh Duong,0,0,GK,29
+Ndiaye Guy Olivier,4,Becamex Binh Duong,0,1,CB,28
+Hà Trung Hậu,23,Becamex Binh Duong,0,0,ST,20
+Nguyễn Huỳnh Văn Bin,13,Becamex Binh Duong,0,0,GK,20

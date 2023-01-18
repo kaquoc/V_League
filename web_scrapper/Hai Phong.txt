@@ -1,1 +1,29 @@
 player_name,kit_number,team_name,appearance,goals,positon,age
+Anh Hùng,2,Hai Phong,0,undefined,CB,30
+Đặng Văn Tới,5,Hai Phong,0,undefined,CB,23
+Martin Lo,6,Hai Phong,0,undefined,CM,25
+Phạm Mạnh Hùng,3,Hai Phong,0,undefined,CB,29
+Hồ Minh Dĩ,11,Hai Phong,0,undefined,CM,24
+Trịnh Hoa Hùng,12,Hai Phong,0,undefined,CB,31
+Nguyễn Hải Huy,14,Hai Phong,0,undefined,CM,31
+Lương Xuân Trường,8,Hai Phong,0,undefined,CM,27
+Nguyễn Văn Đạt,15,Hai Phong,0,undefined,CB,24
+Phạm Trung Hiếu,17,Hai Phong,0,undefined,CB,24
+Lê Mạnh Dũng,19,Hai Phong,0,undefined,CM,28
+Dương Văn Khoa,20,Hai Phong,0,undefined,CB,28
+Nguyễn Kiên Quyết,21,Hai Phong,0,undefined,CM,26
+Mpande Joseph Mbolimbo,7,Hai Phong,0,undefined,ST,28
+Lê Trung Hiếu,23,Hai Phong,0,undefined,CB,28
+Nguyen Nhu Duc Anh,28,Hai Phong,0,undefined,CB,22
+Nguyễn Văn Minh,29,Hai Phong,0,undefined,CM,23
+Phạm Văn Luân,25,Hai Phong,0,undefined,GK,28
+Nguyễn Thành Đồng,45,Hai Phong,0,undefined,CM,27
+Emmanuel Okutu,65,Hai Phong,0,undefined,ST,29
+Nguyễn Hữu Sơn,77,Hai Phong,0,undefined,CM,26
+Nguyễn Tuấn Anh,79,Hai Phong,0,undefined,CM,23
+Triệu Việt Hưng,97,Hai Phong,0,undefined,CM,25
+Bicou Bissainthe,66,Hai Phong,0,undefined,CB,23
+Nguyễn Văn Toản,26,Hai Phong,0,undefined,GK,23
+Nguyễn Trọng Hiếu,38,Hai Phong,0,undefined,CB,21
+Lương Hoàng Nam,30,Hai Phong,0,undefined,CM,25
+Nguyễn Phú Nguyên,22,Hai Phong,0,undefined,CM,27

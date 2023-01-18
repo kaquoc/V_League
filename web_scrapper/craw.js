@@ -140,7 +140,7 @@ const export_csv = async () =>{
     })
 
     for (let i = 0; i < name.length;i++){
-        data = name[i] + "," + kit_nums[i] + ',' + TEAM + ',' + '0' + ',' +  goals[i] + ',' + pos[i] +',' + ages[i] + '\n';
+        data = name[i] + "," + kit_nums[i] + ',' + TEAM + ',' + '0' + ',' +  0 + ',' + pos[i] +',' + ages[i] + '\n';
         fs.appendFile(file, data, (error) => {
             if (error) throw error;
         })

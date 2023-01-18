@@ -1,4 +1,10 @@
-//Postgre SQL
+/** DATABASE CONNECTION SETTINGS
+ * for both:
+ * - localhost
+ * - cloud database service
+ * 
+ * 
+ */
 import pg from 'pg';
 
 

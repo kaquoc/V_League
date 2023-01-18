@@ -1,0 +1,28 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+anh Thảo,3,Becamex Binh Duong,0,0,CB,28
+Nguyễn Thanh Long,7,Becamex Binh Duong,0,0,CB,30
+Rimario Allando Gordon,9,Becamex Binh Duong,0,0,ST,29
+Bùi Vĩ Hào,11,Becamex Binh Duong,0,0,ST,20
+Hồ Sỹ Giáp,10,Becamex Binh Duong,0,0,ST,29
+Moses Oloya,8,Becamex Binh Duong,0,0,CM,NaN
+Trần Duy Khánh,12,Becamex Binh Duong,0,0,CM,26
+Trương Dủ Đạt,15,Becamex Binh Duong,0,0,CB,NaN
+Hà Trung Hậu,18,Becamex Binh Duong,0,0,CB,21
+Nguyễn Trần Việt Cường,16,Becamex Binh Duong,0,0,CM,23
+Tống Anh Tỷ,17,Becamex Binh Duong,0,0,CM,26
+Nguyễn Trọng Huy,6,Becamex Binh Duong,0,0,CM,26
+Đoàn Anh Việt,23,Becamex Binh Duong,0,0,CB,24
+Trần Đình Khương,21,Becamex Binh Duong,0,0,CM,27
+Trần Minh Toàn,25,Becamex Binh Duong,0,0,GK,27
+Nguyễn Tiến Linh,22,Becamex Binh Duong,0,0,ST,26
+Đoàn Hải Quân,27,Becamex Binh Duong,0,0,CM,26
+Trần Hoàng Phương,14,Becamex Binh Duong,0,0,CM,29
+Nguyễn Thành Lộc,4,Becamex Binh Duong,0,0,CB,26
+Võ Hoàng Minh Khoa,29,Becamex Binh Duong,0,0,CM,22
+A Sân,31,Becamex Binh Duong,0,0,CM,NaN
+Đặng Thanh Hoàng,32,Becamex Binh Duong,0,0,CB,26
+Đoàn Tuấn Cảnh,20,Becamex Binh Duong,0,0,CB,25
+Phan Minh Thành,46,Becamex Binh Duong,0,0,GK,25
+Joan Guilherme Barcelos Neto Nogueira,33,Becamex Binh Duong,0,0,ST,NaN
+Trần Trung Hiếu,39,Becamex Binh Duong,0,0,CM,30
+Lưu Tự Nhân,26,Becamex Binh Duong,0,0,CM,22

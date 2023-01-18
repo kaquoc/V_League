@@ -13,9 +13,9 @@ import cheerio from 'cheerio';
 import fs from 'fs';
 
 /** CONSTANT VARIABLE */
-const team_url = 'https://vpf.vn/team/hai-phong/?sid=64431';
-const TEAM= "Hai Phong"
-const CURRENT_YEAR = 2022;
+const team_url = 'https://vpf.vn/team/becamex-binh-duong/?sid=64431';
+const TEAM= "Becamex Binh Duong"
+const CURRENT_YEAR = 2023;
 
 
 /**SCRAPING FUNCTIONS */
@@ -129,7 +129,7 @@ const export_csv = async () =>{
     const pos = await get_position();
     const goals = await get_goals();
     const ages = await get_age();
-    
+    console.log(name);
 
     //array to export into CSV file
 

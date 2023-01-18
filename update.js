@@ -1,6 +1,6 @@
 /**File for updating database
  * 
- * Any functions that changes or update the database in put here
+ * Any functions that changes or update the database
  */
 import pool from './db.js';
 import insert_statement from './Test.js';

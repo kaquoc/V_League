@@ -1,4 +1,13 @@
-create table standings (
+/*Website to get players, teams data
+Players data:
+	- https://www.transfermarkt.us/v-league-1/startseite/wettbewerb/VIE1
+	- https://www.flashscore.com/team/hanoi-fc/x2LRDuqP/squad/
+*/
+
+
+
+
+CREATE TABLE standings (
 	team_name VARCHAR(50) NOT NULL UNIQUE PRIMARY KEY,
 	match_played INT,
 	points INT,
@@ -21,19 +30,20 @@ insert into standings (team_name, match_played, points,wins, draw, lose) values 
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Ho Chi Minh', 10,9,2,3,5);
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Sai Gon', 10,7,1,4,5);
 
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Test Team', 10,0,0,0,0);
 
 
-create table players (
-	player_id BIGSERIAL, 
+CREATE TABLE players (
+	player_id BIGSERIAL UNIQUE PRIMARY KEY,
 	player_name VARCHAR(50),
+	kit_number INT, 
 	team_name VARCHAR(50),
 	appearance INT,
-	nationality VARCHAR(50),
 	goals INT,
-	assists INT,
 	position VARCHAR(3),
+	age INT,
 	FOREIGN KEY (team_name) REFERENCES standings(team_name)
 );
 
 
-insert into players (player_name,team_name,appearance,nationality,goals,assists,position) values ('', 10,23,7,2,1);
+

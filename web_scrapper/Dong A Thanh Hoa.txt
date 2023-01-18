@@ -1,0 +1,31 @@
+ player_name,kit_number,team_name,appearance,goals,positon,age
+Hoàng Đình Tùng,2,Dong A Thanh Hoa,0,0,CM,35
+Nguyễn Minh Tùng,5,Dong A Thanh Hoa,0,0,CM,31
+Nguyễn Sỹ Nam,6,Dong A Thanh Hoa,0,0,CB,30
+Nguyễn Hữu Dũng,7,Dong A Thanh Hoa,0,0,CM,28
+Lê Xuân Hùng,9,Dong A Thanh Hoa,0,0,CM,32
+Lê Văn Thắng,10,Dong A Thanh Hoa,0,0,CM,33
+Nguyễn Thái Sơn,12,Dong A Thanh Hoa,0,0,CM,20
+Trịnh Văn Lợi,15,Dong A Thanh Hoa,0,0,CB,28
+Đinh Tiến Thành,16,Dong A Thanh Hoa,0,0,CM,32
+Lâm Ti Phông,17,Dong A Thanh Hoa,0,0,CM,27
+Đàm Tiến Dũng,4,Dong A Thanh Hoa,0,0,CB,27
+Nguyễn Nam Anh,18,Dong A Thanh Hoa,0,0,CB,30
+Lê Quốc Phương,19,Dong A Thanh Hoa,0,0,CM,32
+Nguyễn Đình Huyên,21,Dong A Thanh Hoa,0,0,CB,22
+Trần Văn Hòa,22,Dong A Thanh Hoa,0,0,CM,25
+Nguyễn Thanh Diệp,25,Dong A Thanh Hoa,0,0,GK,32
+A Mít,27,Dong A Thanh Hoa,0,0,CM,26
+Hoàng Thái Bình,28,Dong A Thanh Hoa,0,0,CM,25
+Lê Phạm Thành Long,11,Dong A Thanh Hoa,0,0,CM,27
+Đoàn Ngọc Hà,29,Dong A Thanh Hoa,0,0,CB,19
+Doãn Ngọc Tân,34,Dong A Thanh Hoa,0,0,CB,29
+Bruno Cunha Cantanhede,37,Dong A Thanh Hoa,0,0,ST,30
+Lê Ngọc Nam,32,Dong A Thanh Hoa,0,0,CM,30
+Trịnh Xuân Hoàng,67,Dong A Thanh Hoa,0,0,GK,23
+Paulo Conrado Do Carmo Sardin,77,Dong A Thanh Hoa,0,0,ST,32
+Gustavo Sant Ana Santos,95,Dong A Thanh Hoa,0,0,CM,28
+Nguyễn Trọng Hùng,20,Dong A Thanh Hoa,0,0,CM,26
+Vũ Xuân Cường,3,Dong A Thanh Hoa,0,0,CB,31
+Lương Bá Sơn,1,Dong A Thanh Hoa,0,0,GK,31
+Lê Thanh Bình,91,Dong A Thanh Hoa,0,0,ST,28

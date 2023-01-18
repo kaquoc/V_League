@@ -13,8 +13,8 @@ import cheerio from 'cheerio';
 import fs from 'fs';
 
 /** CONSTANT VARIABLE */
-const team_url = 'https://vpf.vn/team/cong-an-nhan-dan/?sid=64431';
-const TEAM= "Cong An Ha Noi"
+const team_url = 'https://vpf.vn/team/hong-linh-ha-tinh/?sid=64431';
+const TEAM= "Hong Linh Ha Tinh"
 const CURRENT_YEAR = 2023;
 
 

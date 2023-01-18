@@ -1,0 +1,29 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Lê Văn Sơn,2,Hoang Anh Gia Lai,0,0,CB,27
+Trần Thanh Sơn,6,Hoang Anh Gia Lai,0,0,CM,26
+Châu Ngọc Quang,4,Hoang Anh Gia Lai,0,0,CM,27
+Paollo Madeira Oliveira,7,Hoang Anh Gia Lai,0,0,ST,27
+Đinh Thanh Bình,9,Hoang Anh Gia Lai,0,0,ST,25
+Trần Minh Vương,8,Hoang Anh Gia Lai,0,0,CM,28
+Nguyễn Hữu Anh Tài,5,Hoang Anh Gia Lai,0,0,CB,27
+Lê Minh Bình,10,Hoang Anh Gia Lai,0,0,ST,24
+Washington Brandão Dos Santos,12,Hoang Anh Gia Lai,0,0,ST,33
+Nguyễn Quốc Việt,19,Hoang Anh Gia Lai,0,0,ST,20
+Trần Bảo Toàn,20,Hoang Anh Gia Lai,0,0,CM,23
+Nguyễn Thanh Nhân,23,Hoang Anh Gia Lai,0,0,CB,23
+Nguyễn Đức Việt,24,Hoang Anh Gia Lai,0,0,CM,19
+Dương Văn Lợi,1,Hoang Anh Gia Lai,0,0,GK,23
+Huỳnh Tuấn Linh,26,Hoang Anh Gia Lai,0,0,GK,32
+Nguyễn Văn Triệu,27,Hoang Anh Gia Lai,0,0,CM,20
+Nguyễn Văn Anh,28,Hoang Anh Gia Lai,0,0,ST,27
+Võ Đình Lâm,17,Hoang Anh Gia Lai,0,0,CM,23
+Âu Dương Quân,29,Hoang Anh Gia Lai,0,0,CM,23
+Lê Hữu Phước,34,Hoang Anh Gia Lai,0,0,CM,22
+Pape Abdoulaye Diakite,44,Hoang Anh Gia Lai,0,0,CM,NaN
+A Hoàng,82,Hoang Anh Gia Lai,0,0,CM,28
+Trần Trung Kiên,25,Hoang Anh Gia Lai,0,0,GK,20
+Lê Văn Đại,3,Hoang Anh Gia Lai,0,0,CB,27
+Phan Du Học,62,Hoang Anh Gia Lai,0,0,CB,22
+Trần Đình Bảo,66,Hoang Anh Gia Lai,0,0,CM,26
+Dụng Quang Nho,86,Hoang Anh Gia Lai,0,0,CB,23
+Nguyễn Tuấn Anh,11,Hoang Anh Gia Lai,0,0,CM,28

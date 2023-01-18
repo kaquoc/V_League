@@ -1,0 +1,30 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Bùi Tấn Trường,1,Ha Noi,0,0,GK,37
+Goncalves Silva Lucas Vinicius,7,Ha Noi,0,0,CM,32
+Phạm Tuấn Hải,9,Ha Noi,0,0,ST,25
+Đậu Văn Toàn,8,Ha Noi,0,0,CM,26
+Nguyễn Văn Quyết,10,Ha Noi,0,0,ST,32
+Phạm Thành Lương,11,Ha Noi,0,0,CM,35
+Trần Văn Kiên,13,Ha Noi,0,0,CB,27
+Nguyễn Đức Anh,15,Ha Noi,0,0,CB,NaN
+Nguyễn Thành Chung,16,Ha Noi,0,0,CB,26
+Nguyễn Văn Công,18,Ha Noi,0,0,GK,31
+Nguyễn Văn Trường,19,Ha Noi,0,0,CM,NaN
+Mạch Ngọc Hà,22,Ha Noi,0,0,CM,23
+William Henrique Rodriguez Da Silva,21,Ha Noi,0,0,ST,NaN
+Bùi Hoàng Việt Anh,20,Ha Noi,0,0,CB,24
+De Souza Irmer Jean Carlos,23,Ha Noi,0,0,ST,NaN
+Vũ Văn Sơn,24,Ha Noi,0,0,CB,NaN
+Nguyễn Hữu Anh Tài,5,Ha Noi,0,0,CB,27
+Vũ Tiến Long,27,Ha Noi,0,0,CB,21
+Lê Văn Xuân,45,Ha Noi,0,0,CB,24
+Nguyễn Văn Vĩ,52,Ha Noi,0,0,CB,25
+Quan Văn Chuẩn,37,Ha Noi,0,0,GK,22
+Trần Văn Đạt,65,Ha Noi,0,0,CM,23
+Nguyễn Văn Dũng,66,Ha Noi,0,0,CB,29
+Trương Văn Thái Quý,74,Ha Noi,0,0,CM,26
+Đỗ Hùng Dũng,88,Ha Noi,0,0,CM,30
+Nguyễn Văn Tùng,89,Ha Noi,0,0,ST,22
+Nguyễn Hai Long,14,Ha Noi,0,0,CM,23
+Lê Xuân Tú,25,Ha Noi,0,0,ST,24
+Đỗ Duy Mạnh,2,Ha Noi,0,0,CB,27

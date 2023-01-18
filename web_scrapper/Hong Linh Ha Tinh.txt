@@ -1,0 +1,28 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Nguyễn Vũ Linh,12,Hong Linh Ha Tinh,0,0,CM,26
+Đinh Thanh Trung,7,Hong Linh Ha Tinh,0,0,CM,35
+Janclesio Almeida Santos,14,Hong Linh Ha Tinh,0,0,CB,30
+Đặng Văn Trâm,5,Hong Linh Ha Tinh,0,0,CM,28
+Phạm Văn Long,16,Hong Linh Ha Tinh,0,0,CM,26
+Đào Văn Nam,17,Hong Linh Ha Tinh,0,0,CB,27
+Vũ Quang Nam,18,Hong Linh Ha Tinh,0,0,ST,31
+Nguyễn Xuân Hùng,20,Hong Linh Ha Tinh,0,0,CB,32
+Nguyễn Văn Huy,21,Hong Linh Ha Tinh,0,0,CB,25
+Trần Phi Sơn,10,Hong Linh Ha Tinh,0,0,CM,31
+Bùi Văn Đức,26,Hong Linh Ha Tinh,0,0,CM,26
+Phạm Thanh Tiệp,27,Hong Linh Ha Tinh,0,0,CB,27
+Nguyễn Trung Học,28,Hong Linh Ha Tinh,0,0,CM,25
+Vũ Viết Triều,30,Hong Linh Ha Tinh,0,0,CB,26
+Dương Tùng Lâm,29,Hong Linh Ha Tinh,0,0,GK,24
+Trần Đức Nam,33,Hong Linh Ha Tinh,0,0,ST,25
+Nguyễn Thanh Tùng,36,Hong Linh Ha Tinh,0,0,GK,NaN
+Nguyễn Văn Đức,19,Hong Linh Ha Tinh,0,0,CB,27
+Đào Tấn Lộc,86,Hong Linh Ha Tinh,0,0,CB,25
+Nguyễn Ngọc Thắng,38,Hong Linh Ha Tinh,0,0,CB,21
+Nguyễn Văn Hạnh,97,Hong Linh Ha Tinh,0,0,CB,25
+Diallo Abdoulaye,91,Hong Linh Ha Tinh,0,0,ST,27
+Jose Paulo De Oliveira Pinto,88,Hong Linh Ha Tinh,0,0,ST,29
+Trần Văn Công,37,Hong Linh Ha Tinh,0,0,CM,24
+Dương Quang Tuấn,25,Hong Linh Ha Tinh,0,0,GK,27
+Ngô Xuân Toàn,6,Hong Linh Ha Tinh,0,0,CM,30
+Nguyễn Văn Hiệp,11,Hong Linh Ha Tinh,0,0,CM,29

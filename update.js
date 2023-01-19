@@ -138,25 +138,19 @@ const resetStandings = async() =>{
     }
 }
 
-
-/**Generate a random team name "Test Team" to be insert into database, team will have 22 random players*/
-const insert_rand_team = async () => {
-    await pool.connect();  
-    for (let i = 0; i < 22; i++){
-        console.log(i);
-        const query = insert_statement();
-        try {
-                    // gets connection
-            await pool.query(query, []); // sends queries
-            
-        } catch (error) {
-            console.error(error.stack);
-            console.log("error");
-            return false;
-        } 
-    }
-    await pool.end();              
-};
+/**Insert player into players database 
+ * parameters: player_name, kit_number, team_name, appearance, goals, position, age
+ * 
+ * example SQL statement:
+   INSERT INTO players (player_name, kit_number, team_name, appearance, goals, position, age) VALUES
+                ('Hoang Son Tran', 18, 'Viettel', 0,0,'CF', 25);
+*/
+function insert_player_query(name, kit, team, app, goals, pos, age){
+	var insert_stmt = "INSERT INTO players (player_name,kit_number,team_name,appearance,goals,position, age) VALUES ('" +
+		 name + "'," + kit + ",'" + team + "', " + app + "," + goals + ",'" + pos + "'," + age
+    +")";
+	console.log(insert_stmt);		
+}
 
 
 
@@ -202,8 +196,24 @@ async function insert_csv(data){
  * Parse a text file instead, 
  */
 
-$.get('/Ha Noi.txt', function(data) {
-    console.log(data);
- });
+async function parse_text(){
+    fs.readFile('web_scrapper/Ha Noi.txt', (err,data) => {
+        if (err) throw err;
+        let data_arr = data.toString().split('\n');
+        let i = 1; //start from line 1 because line 0 is column names
+        while (data_arr[i] != ''){
+            let player_arr = data_arr[i].split(",");
+            let player_name = player_arr[0];
+            let player_kit = player_arr[1];
+            let player_team = player_arr[2];
+            let player_appear = player_arr[3];
+            let player_goals = player_arr[4];
+            let player_pos = player_arr[5];
+            let player_age= player_arr[6]; 
+            insert_player_query(player_name,player_kit,player_team,player_appear,player_goals,player_pos,player_age);
+            i++;
+        }
+    })
+}
 
- 
+parse_text();

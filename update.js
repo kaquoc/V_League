@@ -193,15 +193,31 @@ async function insert_csv(data){
 
 
 /**
- * Parse a text file instead, 
+ * Parse each team's text file to insert players into database
  */
+function insert_teams_players(){
+fs.readFile("web_scrapper/teams_name.txt", (err,data) =>{
+    if (err) throw err;
+    let team_arr = data.toString().split('\n');
+    for (let i = 0; i< team_arr.length;i++){
+        let path = 'web_scrapper/Teams_data/' + team_arr[i] +".txt";
+        parse_text(path);
+    }
 
-async function parse_text(){
-    fs.readFile('web_scrapper/Ha Noi.txt', (err,data) => {
+})
+}
+
+function parse_text(path){
+    fs.readFile(path, (err,data) => {
         if (err) throw err;
         let data_arr = data.toString().split('\n');
         let i = 1; //start from line 1 because line 0 is column names
         while (data_arr[i] != ''){
+            i++;
+            if (data_arr[i] == undefined){
+                i++;
+                return; 
+            }
             let player_arr = data_arr[i].split(",");
             let player_name = player_arr[0];
             let player_kit = player_arr[1];
@@ -212,8 +228,12 @@ async function parse_text(){
             let player_age= player_arr[6]; 
             insert_player_query(player_name,player_kit,player_team,player_appear,player_goals,player_pos,player_age);
             i++;
+            
         }
     })
 }
 
-parse_text();
+
+insert_teams_players();
+
+

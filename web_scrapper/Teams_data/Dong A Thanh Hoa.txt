@@ -1,4 +1,4 @@
- player_name,kit_number,team_name,appearance,goals,positon,age
+player_name,kit_number,team_name,appearance,goals,positon,age
 Hoàng Đình Tùng,2,Dong A Thanh Hoa,0,0,CM,35
 Nguyễn Minh Tùng,5,Dong A Thanh Hoa,0,0,CM,31
 Nguyễn Sỹ Nam,6,Dong A Thanh Hoa,0,0,CB,30

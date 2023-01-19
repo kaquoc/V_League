@@ -166,6 +166,9 @@ const insert_rand_team = async () => {
  * 
  * https://sebhastian.com/read-csv-javascript/
  * 
+ * NEED TO BE MODIFY, NEED TO PARSE TXT FILES instead.
+ * 
+ * 
  */
 async function parse_csv(path){
     const data = [];
@@ -185,6 +188,7 @@ async function parse_csv(path){
         return;
     })
 }
+
 async function insert_csv(data){
     await pool.connect();  
     for (let i = 0; i < data.length; i++){
@@ -192,5 +196,14 @@ async function insert_csv(data){
     }
     await pool.end();    
 }
-let file = "./HongLinhHaTinh.csv";
-parse_csv(file);
+
+
+/**
+ * Parse a text file instead, 
+ */
+
+$.get('/Ha Noi.txt', function(data) {
+    console.log(data);
+ });
+
+ 

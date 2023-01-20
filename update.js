@@ -152,8 +152,6 @@ function insert_player_query(name, kit, team, app, goals, pos, age){
 }
 
 
-
-
 /**
  * Parse each team's text file to insert players into database
  */
@@ -177,7 +175,6 @@ function parse_text(path){
             let player_pos = player_arr[5];
             let player_age= player_arr[6]; 
             var query = insert_player_query(player_name,player_kit,player_team,player_appear,player_goals,player_pos,player_age);
-            console.log(query);
             query = query + "\n";
             fs.appendFile("web_scrapper/test.txt",query, (error) => {
                 if (error) throw error;
@@ -191,16 +188,25 @@ function parse_text(path){
 /**Helper function to iterate through a list of teams
  * then call function to read players from that teams
  */
-function insert_teams_players(){
-fs.readFile("web_scrapper/teams_name.txt", (err,data) =>{
-    if (err) throw err;
-    let team_arr = data.toString().split('\n');
-    for (let i = 0; i< team_arr.length;i++){
-        let path = 'web_scrapper/Teams_data/' + team_arr[i] +".txt";
-        parse_text(path);
-    }
 
-})
+//helper function, create a synchronous callback function, event-drive node
+//https://stackoverflow.com/questions/5010288/how-to-make-a-function-wait-until-a-callback-has-been-called-using-node-js
+function get_teams_name(callback){
+    var team_arr;
+    fs.readFile("web_scrapper/teams_name.txt",(err,data) =>{
+        if (err) throw err;
+        team_arr = data.toString().split('\n');
+        callback(team_arr);
+    })
+}
+function insert_teams_players(){
+    get_teams_name((team_arr) => {
+        for (let i = 0; i< team_arr.length;i++){
+            let path = 'web_scrapper/Teams_data/' + team_arr[i] +".txt";
+            parse_text(path);
+        }
+    });
+  
 }
 
 

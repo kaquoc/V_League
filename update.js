@@ -148,8 +148,8 @@ const resetStandings = async() =>{
 function insert_player_query(name, kit, team, app, goals, pos, age){
 	var insert_stmt = "INSERT INTO players (player_name,kit_number,team_name,appearance,goals,position, age) VALUES ('" +
 		 name + "'," + kit + ",'" + team + "', " + app + "," + goals + ",'" + pos + "'," + age
-    +")";
-	console.log(insert_stmt);		
+    +")";	
+    return insert_stmt;
 }
 
 
@@ -195,18 +195,6 @@ async function insert_csv(data){
 /**
  * Parse each team's text file to insert players into database
  */
-function insert_teams_players(){
-fs.readFile("web_scrapper/teams_name.txt", (err,data) =>{
-    if (err) throw err;
-    let team_arr = data.toString().split('\n');
-    for (let i = 0; i< team_arr.length;i++){
-        let path = 'web_scrapper/Teams_data/' + team_arr[i] +".txt";
-        parse_text(path);
-    }
-
-})
-}
-
 function parse_text(path){
     fs.readFile(path, (err,data) => {
         if (err) throw err;
@@ -226,12 +214,33 @@ function parse_text(path){
             let player_goals = player_arr[4];
             let player_pos = player_arr[5];
             let player_age= player_arr[6]; 
-            insert_player_query(player_name,player_kit,player_team,player_appear,player_goals,player_pos,player_age);
+            var query = insert_player_query(player_name,player_kit,player_team,player_appear,player_goals,player_pos,player_age);
+            console.log(query);
+            query = query + "\n";
+            fs.appendFile("web_scrapper/test.txt",query, (error) => {
+                if (error) throw error;
+            })
             i++;
             
         }
     })
 }
+
+/**Helper function to iterate through a list of teams
+ * then call function to read players from that teams
+ */
+function insert_teams_players(){
+fs.readFile("web_scrapper/teams_name.txt", (err,data) =>{
+    if (err) throw err;
+    let team_arr = data.toString().split('\n');
+    for (let i = 0; i< team_arr.length;i++){
+        let path = 'web_scrapper/Teams_data/' + team_arr[i] +".txt";
+        parse_text(path);
+    }
+
+})
+}
+
 
 
 insert_teams_players();

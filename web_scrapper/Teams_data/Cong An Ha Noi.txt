@@ -1,0 +1,30 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Huỳnh Tấn Sinh,3,Cong An Ha Noi,0,0,CB,25
+Nguyễn Xuân Nam,8,Cong An Ha Noi,0,0,ST,29
+Hoàng Văn Toản,12,Cong An Ha Noi,0,0,CM,22
+Sầm Ngọc Đức,7,Cong An Ha Noi,0,0,CB,31
+Tsoumou Hama Juvhel Fred,9,Cong An Ha Noi,0,0,ST,NaN
+Bùi Xuân Thịnh,15,Cong An Ha Noi,0,0,CM,22
+Bùi Tiến Dụng,16,Cong An Ha Noi,0,0,CB,25
+Vũ Văn Thanh,17,Cong An Ha Noi,0,0,CB,27
+Phan Văn Đức,20,Cong An Ha Noi,0,0,CM,27
+Trần Văn Trung,22,Cong An Ha Noi,0,0,CM,25
+Nguyễn Như Tuấn,23,Cong An Ha Noi,0,0,CM,NaN
+Huỳnh Tấn Tài,6,Cong An Ha Noi,0,0,CM,29
+Hà Văn Phương,26,Cong An Ha Noi,0,0,CM,22
+La Nguyễn Bảo Trung,27,Cong An Ha Noi,0,0,CM,21
+Tô Văn Vũ,28,Cong An Ha Noi,0,0,CM,30
+Nguyễn Trọng Long,29,Cong An Ha Noi,0,0,CM,23
+Nguyễn Hữu Thực,30,Cong An Ha Noi,0,0,CB,22
+Vũ Hữu Quý,32,Cong An Ha Noi,0,0,CB,30
+Đỗ Sỹ Huy,33,Cong An Ha Noi,0,0,GK,25
+Phan Văn Hiếu,38,Cong An Ha Noi,0,0,CM,23
+Trần Quang Thịnh,55,Cong An Ha Noi,0,0,CB,22
+Hoàng Trung Phong,82,Cong An Ha Noi,0,0,GK,22
+Jesus Silva Jhon Cley,35,Cong An Ha Noi,0,0,CM,NaN
+Lê Văn Đô,88,Cong An Ha Noi,0,0,CM,22
+Petrovic Todor,43,Cong An Ha Noi,0,0,ST,NaN
+Giáp Tuấn Dương,98,Cong An Ha Noi,0,0,CB,21
+Đoàn Văn Hậu,5,Cong An Ha Noi,0,0,CB,24
+Bùi Tiến Dũng,24,Cong An Ha Noi,0,0,GK,26
+Hồ Tấn Tài,4,Cong An Ha Noi,0,0,CB,26

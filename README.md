@@ -59,3 +59,6 @@ UPDATE 12/23/2022:
 Heroku no longer allow free Postgres database, database currently being move to another storage option.
 
 
+UPDATE 01/17/2023:
+
+Migrating data to ElephantSQL with free plan. Maximum storage size: 20MB.

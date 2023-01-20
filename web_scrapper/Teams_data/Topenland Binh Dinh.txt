@@ -1,0 +1,28 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Phan Ngoc Tín,4,Topenland Binh Dinh,0,0,CB,19
+Trần Văn Thái,5,Topenland Binh Dinh,0,0,CB,22
+Đỗ Thanh Thịnh,6,Topenland Binh Dinh,0,0,CB,25
+Hà Đức Chinh,9,Topenland Binh Dinh,0,0,ST,26
+Marlon Rangel De Almeida,3,Topenland Binh Dinh,0,0,CB,NaN
+Rafaelson Bezerra Fernandes,10,Topenland Binh Dinh,0,0,ST,26
+Nguyễn Tiến Duy,2,Topenland Binh Dinh,0,0,CB,32
+Nguyễn Đức Hữu,12,Topenland Binh Dinh,0,0,CM,22
+Mạc Hồng Quân,8,Topenland Binh Dinh,0,0,CM,NaN
+Lê Ngọc Hải,15,Topenland Binh Dinh,0,0,CB,22
+Đinh Thành Luân,16,Topenland Binh Dinh,0,0,CM,NaN
+Lê Ngọc Bảo,17,Topenland Binh Dinh,0,0,CB,25
+Nguyễn Hải Chi Nguyện,18,Topenland Binh Dinh,0,0,CB,19
+Adriano Schmidt,19,Topenland Binh Dinh,0,0,CB,29
+Đào Gia Việt,20,Topenland Binh Dinh,0,0,ST,20
+Nguyễn Võ Minh Hiếu,22,Topenland Binh Dinh,0,0,CM,NaN
+Cao Văn Triền,23,Topenland Binh Dinh,0,0,CM,30
+Nguyễn Mạnh Cường,24,Topenland Binh Dinh,0,0,GK,26
+Jermie Dwayne Lynch,11,Topenland Binh Dinh,0,0,ST,32
+Le Viktor,7,Topenland Binh Dinh,0,0,CM,NaN
+Lý Công Hoàng Anh,28,Topenland Binh Dinh,0,0,CM,24
+Nguyễn Công Thành,71,Topenland Binh Dinh,0,0,CB,32
+Trần Đình Minh Hoàng,26,Topenland Binh Dinh,0,0,GK,30
+Đỗ Văn Thuận,14,Topenland Binh Dinh,0,0,CM,31
+Nghiêm Xuân Tú,77,Topenland Binh Dinh,0,0,CM,35
+Phạm Văn Thành,88,Topenland Binh Dinh,0,0,CM,29
+Huỳnh Tiến Đạt,43,Topenland Binh Dinh,0,0,ST,23

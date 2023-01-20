@@ -1,0 +1,29 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Hendrio Araujo Dasilva,10,Thep Xanh Nam Dinh,0,0,CM,29
+Mai Xuân Quyết,14,Thep Xanh Nam Dinh,0,0,CM,24
+Hồ Khắc Ngọc,12,Thep Xanh Nam Dinh,0,0,CM,31
+Nguyễn Hữu Tuấn,15,Thep Xanh Nam Dinh,0,0,CB,31
+Nguyễn Đình Mạnh,16,Thep Xanh Nam Dinh,0,0,CM,25
+Gerard Artigas Fonullet,9,Thep Xanh Nam Dinh,0,0,ST,28
+Nguyễn Đình Sơn,19,Thep Xanh Nam Dinh,0,0,CM,22
+Hoàng Xuân Tân,20,Thep Xanh Nam Dinh,0,0,CB,22
+Phan Thế Hưng,21,Thep Xanh Nam Dinh,0,0,ST,21
+Dương Thanh Hào,3,Thep Xanh Nam Dinh,0,0,CB,32
+Phạm Đức Huy,6,Thep Xanh Nam Dinh,0,0,CM,28
+Nguyễn Phong Hồng Duy,7,Thep Xanh Nam Dinh,0,0,CB,27
+Hoàng Minh Tuấn,28,Thep Xanh Nam Dinh,0,0,ST,28
+Phạm Minh Nghĩa,22,Thep Xanh Nam Dinh,0,0,CB,25
+Trần Nguyên Mạnh,26,Thep Xanh Nam Dinh,0,0,GK,32
+Trần Đức Dũng,29,Thep Xanh Nam Dinh,0,0,GK,26
+Ngô Đức Huy,32,Thep Xanh Nam Dinh,0,0,CB,23
+Nguyễn Hạ Long,66,Thep Xanh Nam Dinh,0,0,CB,29
+Lê Vũ Phong,23,Thep Xanh Nam Dinh,0,0,GK,22
+Nguyễn Trọng Đại,77,Thep Xanh Nam Dinh,0,0,CM,26
+Đoàn Thanh Trường,18,Thep Xanh Nam Dinh,0,0,CM,23
+Trần Liêm Điều,82,Thep Xanh Nam Dinh,0,0,GK,22
+Đinh Văn Trường,96,Thep Xanh Nam Dinh,0,0,CB,27
+Trần Mạnh Hùng,97,Thep Xanh Nam Dinh,0,0,CM,26
+Pedro Paulo Alves Vieira Dos Reis,99,Thep Xanh Nam Dinh,0,0,ST,29
+Đinh Viết Tú,2,Thep Xanh Nam Dinh,0,0,CB,31
+Ngô Hoàng Thịnh,79,Thep Xanh Nam Dinh,0,0,CB,31
+Trần Ngọc Sơn,27,Thep Xanh Nam Dinh,0,0,ST,20

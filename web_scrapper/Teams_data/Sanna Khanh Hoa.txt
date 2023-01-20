@@ -1,0 +1,29 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Phan Van Long,9,Sanna Khanh Hoa,0,0,ST,25
+Nguyễn Thanh Thụ,2,Sanna Khanh Hoa,0,0,CB,30
+Douglas Starnley Ferreira,10,Sanna Khanh Hoa,0,0,ST,30
+Lê Duy Thanh,8,Sanna Khanh Hoa,0,0,CM,33
+Phạm Trùm Tỉnh,11,Sanna Khanh Hoa,0,0,CM,28
+Lê Nguyễn Thanh Vị,14,Sanna Khanh Hoa,0,0,CM,24
+Nguyễn Hoài Anh,17,Sanna Khanh Hoa,0,0,GK,30
+Trần Văn Tùng,20,Sanna Khanh Hoa,0,0,ST,27
+Trần Trọng Hiếu,23,Sanna Khanh Hoa,0,0,CB,27
+Nguyễn Minh Huy,5,Sanna Khanh Hoa,0,0,CM,31
+Ryan Ha,24,Sanna Khanh Hoa,0,0,ST,26
+Nguyễn Văn Việt,28,Sanna Khanh Hoa,0,0,CB,34
+Võ Út Cường,31,Sanna Khanh Hoa,0,0,CB,33
+Jairo Rodrigeus Peixoto Filho,33,Sanna Khanh Hoa,0,0,CB,31
+Nguyễn Duy Dương,35,Sanna Khanh Hoa,0,0,CB,28
+Nguyễn Văn Ngọ,37,Sanna Khanh Hoa,0,0,CB,32
+Huỳnh Nhật Tân,52,Sanna Khanh Hoa,0,0,CM,26
+Nguyễn Đức Cường,30,Sanna Khanh Hoa,0,0,CM,27
+Lê Văn Trường,55,Sanna Khanh Hoa,0,0,GK,28
+Yago Goncalves Nogueira Ramos,66,Sanna Khanh Hoa,0,0,ST,27
+Nguyễn Văn Thạnh,71,Sanna Khanh Hoa,0,0,ST,32
+Cao Văn Khánh,77,Sanna Khanh Hoa,0,0,CB,31
+Trần Đình Kha,88,Sanna Khanh Hoa,0,0,ST,29
+Nguyễn Hữu Khôi,89,Sanna Khanh Hoa,0,0,ST,31
+Lê Tiến Anh,22,Sanna Khanh Hoa,0,0,CM,25
+Võ Ngọc Cường,93,Sanna Khanh Hoa,0,0,GK,29
+Trần Thế Kiệt,1,Sanna Khanh Hoa,0,0,GK,30
+Nguyễn Thành Nhân,7,Sanna Khanh Hoa,0,0,CM,23

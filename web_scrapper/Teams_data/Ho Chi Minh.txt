@@ -1,0 +1,28 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Trần Thanh Bình,8,Ho Chi Minh,0,0,CM,30
+Hồ Tuấn Tài,9,Ho Chi Minh,0,0,ST,28
+Lâm Thuận,11,Ho Chi Minh,0,0,CM,25
+Uông Ngọc Tiến,15,Ho Chi Minh,0,0,CM,23
+Bruce Alexander Robert,16,Ho Chi Minh,0,0,ST,25
+Nguyễn Vũ Tín,7,Ho Chi Minh,0,0,CB,25
+Chu Văn Kiên,18,Ho Chi Minh,0,0,CM,25
+Nguyễn Thanh Khôi,20,Ho Chi Minh,0,0,CM,22
+Nguyễn Minh Trung,17,Ho Chi Minh,0,0,CM,31
+Lê Cao Hoài An,5,Ho Chi Minh,0,0,CB,30
+Dương Văn Trung,22,Ho Chi Minh,0,0,CB,26
+Phạm Hữu Nghĩa,25,Ho Chi Minh,0,0,GK,31
+Thân Thành Tín,26,Ho Chi Minh,0,0,CB,30
+Võ Hữu Việt Hoàng,27,Ho Chi Minh,0,0,CB,21
+Trần Hoàng Phúc,28,Ho Chi Minh,0,0,CB,22
+Lê Vương Minh Nhất,32,Ho Chi Minh,0,0,CB,23
+Đặng Ngọc Tuấn,38,Ho Chi Minh,0,0,GK,28
+Hoàng Vũ Olaleye Samson,39,Ho Chi Minh,0,0,ST,35
+Võ Huy Toàn,6,Ho Chi Minh,0,0,CM,30
+Guyenne Vincent Trọng Trí,97,Ho Chi Minh,0,0,CM,31
+Green Daniel Micheal,92,Ho Chi Minh,0,0,ST,26
+Campbell Jonathan David Ward,99,Ho Chi Minh,0,0,CB,32
+Nguyễn Thanh Thắng,1,Ho Chi Minh,0,0,GK,35
+Ngô Tùng Quốc,2,Ho Chi Minh,0,0,CB,25
+Hoàng Vĩnh Nguyên,23,Ho Chi Minh,0,0,CM,21
+Đào Quốc Gia,21,Ho Chi Minh,0,0,CM,27
+Nguyễn Tăng Tiến,4,Ho Chi Minh,0,0,CB,29

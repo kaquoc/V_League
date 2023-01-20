@@ -1,6 +1,6 @@
 /**File for updating database
  * 
- * Any functions that changes or update the database in put here
+ * Any functions that changes or update the database
  */
 import pool from './db.js';
 import insert_statement from './Test.js';
@@ -138,25 +138,19 @@ const resetStandings = async() =>{
     }
 }
 
-
-/**Generate a random team name "Test Team" to be insert into database, team will have 22 random players*/
-const insert_rand_team = async () => {
-    await pool.connect();  
-    for (let i = 0; i < 22; i++){
-        console.log(i);
-        const query = insert_statement();
-        try {
-                    // gets connection
-            await pool.query(query, []); // sends queries
-            
-        } catch (error) {
-            console.error(error.stack);
-            console.log("error");
-            return false;
-        } 
-    }
-    await pool.end();              
-};
+/**Insert player into players database 
+ * parameters: player_name, kit_number, team_name, appearance, goals, position, age
+ * 
+ * example SQL statement:
+   INSERT INTO players (player_name, kit_number, team_name, appearance, goals, position, age) VALUES
+                ('Hoang Son Tran', 18, 'Viettel', 0,0,'CF', 25);
+*/
+function insert_player_query(name, kit, team, app, goals, pos, age){
+	var insert_stmt = "INSERT INTO players (player_name,kit_number,team_name,appearance,goals,position, age) VALUES ('" +
+		 name + "'," + kit + ",'" + team + "', " + app + "," + goals + ",'" + pos + "'," + age
+    +")";	
+    return insert_stmt;
+}
 
 
 
@@ -165,6 +159,9 @@ const insert_rand_team = async () => {
  * parameter: file path to csv file
  * 
  * https://sebhastian.com/read-csv-javascript/
+ * 
+ * NEED TO BE MODIFY, NEED TO PARSE TXT FILES instead.
+ * 
  * 
  */
 async function parse_csv(path){
@@ -185,6 +182,7 @@ async function parse_csv(path){
         return;
     })
 }
+
 async function insert_csv(data){
     await pool.connect();  
     for (let i = 0; i < data.length; i++){
@@ -192,5 +190,59 @@ async function insert_csv(data){
     }
     await pool.end();    
 }
-let file = "./HongLinhHaTinh.csv";
-parse_csv(file);
+
+
+/**
+ * Parse each team's text file to insert players into database
+ */
+function parse_text(path){
+    fs.readFile(path, (err,data) => {
+        if (err) throw err;
+        let data_arr = data.toString().split('\n');
+        let i = 1; //start from line 1 because line 0 is column names
+        while (data_arr[i] != ''){
+            i++;
+            if (data_arr[i] == undefined){
+                i++;
+                return; 
+            }
+            let player_arr = data_arr[i].split(",");
+            let player_name = player_arr[0];
+            let player_kit = player_arr[1];
+            let player_team = player_arr[2];
+            let player_appear = player_arr[3];
+            let player_goals = player_arr[4];
+            let player_pos = player_arr[5];
+            let player_age= player_arr[6]; 
+            var query = insert_player_query(player_name,player_kit,player_team,player_appear,player_goals,player_pos,player_age);
+            console.log(query);
+            query = query + "\n";
+            fs.appendFile("web_scrapper/test.txt",query, (error) => {
+                if (error) throw error;
+            })
+            i++;
+            
+        }
+    })
+}
+
+/**Helper function to iterate through a list of teams
+ * then call function to read players from that teams
+ */
+function insert_teams_players(){
+fs.readFile("web_scrapper/teams_name.txt", (err,data) =>{
+    if (err) throw err;
+    let team_arr = data.toString().split('\n');
+    for (let i = 0; i< team_arr.length;i++){
+        let path = 'web_scrapper/Teams_data/' + team_arr[i] +".txt";
+        parse_text(path);
+    }
+
+})
+}
+
+
+
+insert_teams_players();
+
+

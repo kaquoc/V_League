@@ -1,0 +1,29 @@
+player_name,kit_number,team_name,appearance,goals,positon,age
+Hồ Sỹ Sâm,6,Song Lam Nghe An,0,0,CM,30
+Phạm Xuân Mạnh,7,Song Lam Nghe An,0,0,CB,27
+Hồ Phúc Tịnh,8,Song Lam Nghe An,0,0,ST,29
+Nguyễn Trọng Hoàng,9,Song Lam Nghe An,0,0,CM,34
+Jordy Soladio Kandolo,10,Song Lam Nghe An,0,0,ST,25
+Lê Văn Thành,5,Song Lam Nghe An,0,0,CB,22
+Vytas Gaspuitis,12,Song Lam Nghe An,0,0,CB,29
+Nguyễn Văn Việt,14,Song Lam Nghe An,0,0,CM,24
+Trần Nam Hải,17,Song Lam Nghe An,0,0,CM,19
+Trần Đình Tiến,15,Song Lam Nghe An,0,0,CM,25
+Bùi Đình Châu,4,Song Lam Nghe An,0,0,CM,27
+Nguyễn Văn Việt,1,Song Lam Nghe An,0,0,GK,21
+Ngô Văn Lương,20,Song Lam Nghe An,0,0,ST,22
+Phan Xuân Đại,21,Song Lam Nghe An,0,0,ST,20
+Nguyễn Xuân Bình,22,Song Lam Nghe An,0,0,CM,22
+Đinh Xuân Tiến,23,Song Lam Nghe An,0,0,CM,20
+Hồ Khắc Lương,24,Song Lam Nghe An,0,0,CB,22
+Trần Văn Tiến,25,Song Lam Nghe An,0,0,GK,29
+Vương Văn Huy,2,Song Lam Nghe An,0,0,CB,22
+Hồ Văn Cường,30,Song Lam Nghe An,0,0,CB,20
+Trần Đình Hoàng,66,Song Lam Nghe An,0,0,CB,32
+Đặng Văn Lắm,37,Song Lam Nghe An,0,0,CM,24
+Nguyễn Văn Bách,27,Song Lam Nghe An,0,0,CM,20
+Mai Sỹ Hoàng,79,Song Lam Nghe An,0,0,CB,24
+Thái Bá Sang,86,Song Lam Nghe An,0,0,CB,24
+Olaha Michael Onyedikachi,19,Song Lam Nghe An,0,0,ST,26
+Nguyễn Văn Hoàng,18,Song Lam Nghe An,0,0,GK,28
+Trần Mạnh Quỳnh,11,Song Lam Nghe An,0,0,CM,22

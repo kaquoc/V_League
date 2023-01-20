@@ -3,13 +3,10 @@
  * Any functions that changes or update the database
  */
 import pool from './db.js';
-import insert_statement from './Test.js';
-
-
-
+//import insert_statement from './Test.js';
 import * as fs from "fs";
 
-
+import {insert_all_players} from "./Insert_all_players.js";
 
 /** Update player goal count: Provide player name and number of goals score to update.
 */
@@ -137,80 +134,10 @@ const resetStandings = async() =>{
     }
 }
 
-/**Insert player into players database 
- * parameters: player_name, kit_number, team_name, appearance, goals, position, age
- * 
- * example SQL statement:
-   INSERT INTO players (player_name, kit_number, team_name, appearance, goals, position, age) VALUES
-                ('Hoang Son Tran', 18, 'Viettel', 0,0,'CF', 25);
-*/
-function insert_player_query(name, kit, team, app, goals, pos, age){
-	var insert_stmt = "INSERT INTO players (player_name,kit_number,team_name,appearance,goals,position, age) VALUES ('" +
-		 name + "'," + kit + ",'" + team + "', " + app + "," + goals + ",'" + pos + "'," + age
-    +")";	
-    return insert_stmt;
-}
-
-
-/**
- * Parse each team's text file to insert players into database
- */
-function parse_text(path){
-    fs.readFile(path, (err,data) => {
-        if (err) throw err;
-        let data_arr = data.toString().split('\n');
-        let i = 1; //start from line 1 because line 0 is column names
-        while (data_arr[i] != ''){
-            i++;
-            if (data_arr[i] == undefined){
-                i++;
-                return; 
-            }
-            let player_arr = data_arr[i].split(",");
-            let player_name = player_arr[0];
-            let player_kit = player_arr[1];
-            let player_team = player_arr[2];
-            let player_appear = player_arr[3];
-            let player_goals = player_arr[4];
-            let player_pos = player_arr[5];
-            let player_age= player_arr[6]; 
-            var query = insert_player_query(player_name,player_kit,player_team,player_appear,player_goals,player_pos,player_age);
-            query = query + "\n";
-            fs.appendFile("web_scrapper/test.txt",query, (error) => {
-                if (error) throw error;
-            })
-            i++;
-            
-        }
-    })
-}
-
-/**Helper function to iterate through a list of teams
- * then call function to read players from that teams
- */
-
-//helper function, create a synchronous callback function, event-drive node
-//https://stackoverflow.com/questions/5010288/how-to-make-a-function-wait-until-a-callback-has-been-called-using-node-js
-function get_teams_name(callback){
-    var team_arr;
-    fs.readFile("web_scrapper/teams_name.txt",(err,data) =>{
-        if (err) throw err;
-        team_arr = data.toString().split('\n');
-        callback(team_arr);
-    })
-}
 function insert_teams_players(){
-    get_teams_name((team_arr) => {
-        for (let i = 0; i< team_arr.length;i++){
-            let path = 'web_scrapper/Teams_data/' + team_arr[i] +".txt";
-            parse_text(path);
-        }
-    });
-  
+    insert_all_players();
 }
 
 
 
 insert_teams_players();
-
-

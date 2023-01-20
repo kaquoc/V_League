@@ -15,7 +15,7 @@ import * as fs from "fs";
 function insert_player_query(name, kit, team, app, goals, pos, age){
 	var insert_stmt = "INSERT INTO players (player_name,kit_number,team_name,appearance,goals,position, age) VALUES ('" +
 		 name + "'," + kit + ",'" + team + "', " + app + "," + goals + ",'" + pos + "'," + age
-    +")";	
+    +");";	
     return insert_stmt;
 }
 
@@ -46,7 +46,9 @@ function parse_team_players(team){
 		let player_appear = player_arr[3];
 		let player_goals = player_arr[4];
 		let player_pos = player_arr[5];
-		let player_age= player_arr[6]; 
+		//if player age data is not available, or NaN, by default, age is 0
+		let player_age = (Number.isNaN(player_arr[6]) || player_arr[6]=="NaN") ? 0: player_arr[6];
+		player_arr[6]; 
 		var query = insert_player_query(player_name,player_kit,player_team,player_appear,player_goals,player_pos,player_age);
 		query = query + "\n";
 		fs.appendFileSync("web_scrapper/test.txt",query, (error) => {

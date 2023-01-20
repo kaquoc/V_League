@@ -16,7 +16,7 @@ CREATE TABLE standings (
 	lose INT
 );
 
-insert into standings (team_name, match_played, points,wins, draw, lose) values ('Hanoi',0,0,0,0,0);
+insert into standings (team_name, match_played, points,wins, draw, lose) values ('Ha Noi',0,0,0,0,0);
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Hoang Anh Gia Lai',0,0,0,0,0);
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Song Lam Nghe An',0,0,0,0,0);
 insert into standings (team_name, match_played, points,wins, draw, lose) values ('Hai Phong',0,0,0,0,0);

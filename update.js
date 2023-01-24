@@ -26,7 +26,7 @@ const updatePlayer_goal = async (player_name, goals) => {
     }
 };
 /**increament a player appearance 1 at a time */
-const updatePlayer_appearance = async (player_name) => {
+const incrementPlayer_appearance = async (player_name) => {
     const query = `UPDATE "players" 
                    SET "appearance" = appearance + 1
                    WHERE "player_name" = $1`;
@@ -108,9 +108,13 @@ const updateMatchResult = async (home_team,score1,away_team,score2) => {
 /**function use to reset all players stat (except player_id,player_name,kit number, age, position and team_name) */
 const resetPlayers = async() =>{
     const query = 'UPDATE "players" SET "appearance" = 0, "goals" = 0';
+    console.log("open connection");
     try {
-        await pool.connect();          // gets connection
-        await pool.query(query, []); // sends queries
+        const x = await pool.connect();          // gets connection
+        const y = await pool.query(query, []); // sends queries
+        console.log(y);
+        await pool.end();  
+        console.log("closing connection");
         return true;
     } catch (error) {
         console.error(error.stack);
@@ -134,10 +138,8 @@ const resetStandings = async() =>{
     }
 }
 
+/**Insert all players from current list of teams*/
 function insert_teams_players(){
     insert_all_players();
 }
-
-
-
-insert_teams_players();
+resetPlayers()

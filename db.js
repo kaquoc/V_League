@@ -24,19 +24,21 @@ const poolConfig2 = {
     port: 5432
 };
 
-//config to run with Heroku Postgres. 
+//config to run with Heroku Postgres.  UPDATE 01/24/23 - REDACTED, no longer working with heroku
 /**Current version: localhost server with HerokuPostgres
         rejectUnauthorized: true  -- will verified the server certificate against a list of supplied CAs
                                     error will be presented when verification fail
         rejectUnauthorizedL false -- will ignore server's verification. 
  */
+
 const poolConfig = {
     connectionString: database_url,
-    //HerokuPostgres requires SSL connection to be made. setting rejectUnauthorized to false means we are bypassing this
-    //https://stackoverflow.com/questions/61097695/self-signed-certificate-error-during-query-the-heroku-hosted-postgres-database
+    /**HerokuPostgres requires SSL connection to be made. setting rejectUnauthorized to false means we are bypassing this
+    https://stackoverflow.com/questions/61097695/self-signed-certificate-error-during-query-the-heroku-hosted-postgres-database
     ssl: {
         rejectUnauthorized: false
     }
+    */
 }
 
 

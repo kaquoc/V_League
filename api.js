@@ -4,7 +4,7 @@ import cors from 'cors'; //communication between express and server
 import pool from './db.js' //database
 
 const app = express();
-const PORT = process.env.PORT || 3000; //for now localhost is hardcode at port 3000
+const PORT = process.env.PORT || 3001; //for now localhost is hardcode at port 3000
 
 //if we running on a cloud server (e.g Heroku), then its dependent on the environemnt,else fallback on port 5000
 const corsOption = {origin: process.env.URL || '*'}; //anyone can use our API
@@ -14,13 +14,18 @@ app.use(cors(corsOption));
 
 app.use(raw()); //middleware body parser, use to process incoming Request into JSON String
 
+//default intro page
+
+app.get("/api", (req, res) => {
+    res.json({ message: "Hello from server!" });
+  });
 
 //reponse to a HTTP GET request
 //retrieve table data from table "standings" that we created using HerokuPostgres.
 app.get("/standings", async (req,res) => {
     try {
         const board = await pool.query("SELECT * FROM standings ORDER BY points DESC");
-        res.json(board.rows);
+        res.json({message: board.rows});
     } catch (error) {
         console.log(error.message);
     }

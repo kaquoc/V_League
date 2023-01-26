@@ -4,7 +4,7 @@ import cors from 'cors'; //communication between express and server
 import pool from './db.js' //database
 
 const app = express();
-const PORT = process.env.PORT || 3001; //for now localhost is hardcode at port 3000
+const PORT = process.env.PORT || 3001; //for now localhost is hardcode at port 3001
 
 //if we running on a cloud server (e.g Heroku), then its dependent on the environemnt,else fallback on port 5000
 const corsOption = {origin: process.env.URL || '*'}; //anyone can use our API

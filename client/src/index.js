@@ -31,5 +31,5 @@ my_element = (
   </ul>
 );
 
-//ReactDOM.render(my_element, document.getElementById('root'));
+//ReactDOM.render(my_element, document.getElementById('navbar'));
 

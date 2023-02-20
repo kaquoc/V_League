@@ -15,9 +15,10 @@ app.use(cors(corsOption));
 app.use(raw()); //middleware body parser, use to process incoming Request into JSON String
 
 //default intro page
-
-app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server!" });
+//getting data from GET command, with http://localhost:3001/bob/99
+app.get("/:name/:age", (req, res) => {
+    //res.json({ message: "Hello from server!" });
+    res.json({name: req.params.name, age: req.params.age});
   });
 
 //reponse to a HTTP GET request

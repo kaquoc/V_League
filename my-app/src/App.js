@@ -1,29 +1,37 @@
 import './App.css';
 import React from 'react';
+import { useState } from 'react';
+import {Overview1,Overview2} from './page_components/Overview.js';
 
 function Topnav(){
   return (
-    <div class = "topNavBar">
+    <div className = "topNavBar">
       <a>V League API</a>
-        <div class = "right-text">
+        <div className = "right-text">
           <a >About</a>
           <a >Code</a>
         </div>
     </div>
   );
 }
+
 //side navigation bar and page content
 function Sidenav(){
+  const[content, setContent] = useState(Overview1);
+  const handleOverview = () =>{
+      setContent(<Overview2 />);
+  }
+
   return (
     <>
-      <div class="sidenav">
-        <a href="#">Overview</a>
+      <div className="sidenav">
+        <a href="#" onClick={handleOverview}>Overview</a>
         <a href="#">Updates</a>
         <a href="#">Documentation</a>
         <a href="#">FAQ</a> 
     </div>
-    <div class="main">
-      <p>Hello there my name is page content</p>
+    <div className="main">
+      {content}
     </div>
   </>
   )

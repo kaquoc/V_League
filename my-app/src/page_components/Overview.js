@@ -1,8 +1,7 @@
-
 export function Overview1(){
     return (
         <>
-            <h2>Overview</h2>
+            <h2>About</h2>
             <p>The API for the Vietnamese Football League is a valuable 
                 resource for sports enthusiasts and data analysts who are 
                 interested in studying and analyzing player and team 
@@ -27,7 +26,11 @@ export function Overview1(){
 
 export function Overview2(){
     return (
-      <p>Hello this is overview page2</p>
+      <>
+      <h2>Overview</h2>
+      <p>User can call API to return data regarding players, teams, or fixtures.</p>
+      </>
+
     )
   }
 

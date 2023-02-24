@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { useState } from 'react';
 import {Overview1,Overview2} from './page_components/Overview.js';
-
+import {Update} from "./page_components/Updates.js";
 function Topnav(){
   return (
     <div className = "topNavBar">
@@ -21,12 +21,15 @@ function Sidenav(){
   const handleOverview = () =>{
       setContent(<Overview2 />);
   }
+  const handleUpdates = () =>{
+    setContent(<Update />);
+  }
 
   return (
     <>
       <div className="sidenav">
         <a href="#" onClick={handleOverview}>Overview</a>
-        <a href="#">Updates</a>
+        <a href="#" onClick = {handleUpdates} >Updates</a>
         <a href="#">Documentation</a>
         <a href="#">FAQ</a> 
     </div>

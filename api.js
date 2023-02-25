@@ -31,7 +31,6 @@ app.get("/standings", async (req,res) => {
         console.log(error.message);
     }
 })
-
 app.get("/players", async (reg,res) => {
     try {
         const board = await pool.query("SELECT * FROM players ORDER BY kit_number DESC");
@@ -40,14 +39,11 @@ app.get("/players", async (reg,res) => {
         console.log(error.message);
     }
 })
-
 //Function for testing purposes, return server Information.
 app.get("/server_info", async (reg,res) => {
     
     res.json("Server port number: " + PORT);
 })
-
-
 app.listen(PORT, () => {
     console.log("server is listen on port: " + PORT);
 });

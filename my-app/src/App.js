@@ -3,6 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import {Overview1,Overview2} from './page_components/Overview.js';
 import {Update} from "./page_components/Updates.js";
+import {Documentation} from "./page_components/Documentation.js";
 function Topnav(){
   return (
     <div className = "topNavBar">
@@ -24,13 +25,16 @@ function Sidenav(){
   const handleUpdates = () =>{
     setContent(<Update />);
   }
+  const handleDocu = () =>{
+    setContent(<Documentation />);
+  }
 
   return (
     <>
       <div className="sidenav">
         <a href="#" onClick={handleOverview}>Overview</a>
         <a href="#" onClick = {handleUpdates} >Updates</a>
-        <a href="#">Documentation</a>
+        <a href="#" onClick = {handleDocu}>Documentation</a>
         <a href="#">FAQ</a> 
     </div>
     <div className="main">

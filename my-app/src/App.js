@@ -46,14 +46,11 @@ function Sidenav(){
 function App() {
   return (
     <>
-    <Topnav />
+    <Topnav/>
     <Sidenav />
     </>
   )
-    
 }
-
-
 
 
 export default App;

@@ -32,11 +32,15 @@ app.get("/standings", async (req,res) => {
 })
 app.get("/players", async (reg,res) => {
     try {
-        const board = await pool.query("SELECT * FROM players ORDER BY kit_number DESC");
+        const board = await pool.query("SELECT * FROM players LIMIT 100");
         res.json(board.rows);
     } catch (error) {
         console.log(error.message);
     }
+})
+app.post("/players",async (req,res) => {
+    const request = req.body;
+    console.log(request);
 })
 //Function for testing purposes, return server Information.
 app.get("/server_info", async (reg,res) => {
@@ -46,6 +50,7 @@ app.get("/server_info", async (reg,res) => {
 app.listen(PORT, () => {
     console.log("server is listen on port: " + PORT);
 });
+
 
 
 

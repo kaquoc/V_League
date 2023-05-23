@@ -32,16 +32,64 @@ const StandingsTable = ({standings}) =>{
         </div>
       );
 }
-
+const PlayersTable = ({players}) =>{
+  return (
+    <div>
+      <h2>Players Table</h2>
+      <table className="standings-table">
+        <thead>
+          <tr>
+            <th>Player name</th>
+            <th>Team</th>
+            <th>Kit number</th>
+            <th>Appearance</th>
+            <th>Goals</th>
+            <th>Position</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+      {players.map((player, index) => (
+        <tr key={index}>
+          <td>{player.player_name}</td>
+          <td>{player.team_name}</td>
+          <td>{player.kit_number}</td>
+          <td>{player.appearance}</td>
+          <td>{player.goals}</td>
+          <td>{player.position}</td>
+          <td>{player.age}</td>
+        </tr>
+      ))}
+    </tbody>
+      </table>
+    </div>
+  );
+}
 export function Documentation(){
     const [standings, setStandings] = useState([]);
+    const [players, setPlayers] = useState([]);
+
+    const getPlayers = async () =>{
+      try{
+        let response = await fetch("http://localhost:3001/players", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({key: "100"})
+        });
+        let data = await response.json();
+        setPlayers(data);
+      }catch (error){
+        console.log(error);
+      }
+    };
 
     const getStanding = async () =>{
         try{
-            let data = await fetch("http://localhost:3001/standings");
-            let data2 = await data.json();
-            setStandings(data2.message);
-            console.log(data2.message);
+            let response = await fetch("http://localhost:3001/standings");
+            let data = await response.json();
+            setStandings(data.message);
         }catch(error){
             console.log("error");
         }
@@ -67,6 +115,11 @@ export function Documentation(){
         <button onClick ={getStanding}>Get Standings</button>
         <pre>
             <StandingsTable standings = {standings}/>
+        </pre>
+
+        <button onClick ={getPlayers}>Get Players</button>
+        <pre>
+           <PlayersTable players = {players}/>
         </pre>
         </>
     )

@@ -1,7 +1,7 @@
 import express, {json, raw} from "express";
 import cors from 'cors'; //communication between express and server
 import pool from './db.js' //database
-
+import bodyParser from "body-parser";
 const app = express();
 const PORT = process.env.PORT || 3001; //for now localhost is hardcode at port 3001, port 3000 is for front-end
 
@@ -10,8 +10,9 @@ const corsOption = {origin: process.env.URL || '*'}; //anyone can use our API
 
 app.use(cors(corsOption));
 
-
+app.use(bodyParser.json()); 
 app.use(raw()); //middleware body parser, use to process incoming Request into JSON String
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 //default intro page
 //getting data from GET command, with http://localhost:3001/bob/99
@@ -41,6 +42,7 @@ app.get("/players", async (reg,res) => {
 app.post("/players",async (req,res) => {
     const request = req.body;
     console.log(request);
+    res.sendStatus(200);
 })
 //Function for testing purposes, return server Information.
 app.get("/server_info", async (reg,res) => {

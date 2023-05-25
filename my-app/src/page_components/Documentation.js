@@ -78,6 +78,8 @@ export function Documentation(){
           },
           body: JSON.stringify({key: "100"})
         });
+
+        console.log("stringtufy: " + JSON.stringify({key: "100"}));
         let data = await response.json();
         setPlayers(data);
       }catch (error){

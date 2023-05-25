@@ -1,5 +1,7 @@
 import {useState, useEffect} from "react";
- import "./Documentation.css";
+import "./Documentation.css";
+
+
 
 const StandingsTable = ({standings}) =>{
     return (
@@ -68,6 +70,16 @@ const PlayersTable = ({players}) =>{
 export function Documentation(){
     const [standings, setStandings] = useState([]);
     const [players, setPlayers] = useState([]);
+    const [numPlayers,setNumPlayers] = useState("");
+
+
+    const handleInputChange = (event) => {
+      const value = event.target.value;
+      setNumPlayers(value);
+      if (value < 0){
+        alert("Please enter a value larger than 0");
+      }
+    };
 
     const getPlayers = async () =>{
       try{
@@ -76,10 +88,8 @@ export function Documentation(){
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({key: "100"})
+          body: JSON.stringify({key: numPlayers})
         });
-
-        console.log("stringtufy: " + JSON.stringify({key: "100"}));
         let data = await response.json();
         setPlayers(data);
       }catch (error){
@@ -92,6 +102,7 @@ export function Documentation(){
             let response = await fetch("http://localhost:3001/standings");
             let data = await response.json();
             setStandings(data.message);
+        
         }catch(error){
             console.log("error");
         }
@@ -118,7 +129,7 @@ export function Documentation(){
         <pre>
             <StandingsTable standings = {standings}/>
         </pre>
-
+        <input type="text" id="myTextBox" onChange={handleInputChange} required min ={0} placeholder="Enter number of players:" />
         <button onClick ={getPlayers}>Get Players</button>
         <pre>
            <PlayersTable players = {players}/>

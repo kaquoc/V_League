@@ -31,18 +31,25 @@ app.get("/standings", async (req,res) => {
         console.log(error.message);
     }
 })
+//getting players without limits
 app.get("/players", async (reg,res) => {
     try {
-        const board = await pool.query("SELECT * FROM players LIMIT 100");
+        const board = await pool.query("SELECT * FROM players");
         res.json(board.rows);
     } catch (error) {
         console.log(error.message);
     }
 })
+//getting players with user request limit
 app.post("/players",async (req,res) => {
+    //error handling on the front end
     const request = req.body;
-    console.log(request);
-    res.sendStatus(200);
+    try {
+        const board = await pool.query("SELECT * FROM players LIMIT " +  request.key);
+        res.json(board.rows);
+    } catch (error) {
+        console.log(error.message);
+    }
 })
 //Function for testing purposes, return server Information.
 app.get("/server_info", async (reg,res) => {

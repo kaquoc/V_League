@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import "./Documentation.css";
-
+import { HOST_SERVER } from "../config";
 
 
 const StandingsTable = ({standings}) =>{
@@ -67,11 +67,13 @@ const PlayersTable = ({players}) =>{
     </div>
   );
 }
+
 export function Documentation(){
     const [standings, setStandings] = useState([]);
     const [players, setPlayers] = useState([]);
     const [numPlayers,setNumPlayers] = useState("");
-
+    const [teamPlayers, setTeamPlayers] = useState([]);
+    const [teamName, setTeamName] = useState("");
 
     const handleInputChange = (event) => {
       const value = event.target.value;
@@ -81,9 +83,14 @@ export function Documentation(){
       }
     };
 
+    const handleInputTeamName = (event) =>{
+      const value = event.target.value;
+      setTeamName(value);
+    }
+
     const getPlayers = async () =>{
       try{
-        let response = await fetch("http://localhost:3001/players", {
+        let response = await fetch(HOST_SERVER+ "players", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -99,7 +106,7 @@ export function Documentation(){
 
     const getStanding = async () =>{
         try{
-            let response = await fetch("http://localhost:3001/standings");
+            let response = await fetch(HOST_SERVER+ "standings");
             let data = await response.json();
             setStandings(data.message);
         
@@ -107,6 +114,35 @@ export function Documentation(){
             console.log("error");
         }
     };
+    
+    const getTeamPlayers = async () => {
+      try{
+        let response = await fetch(HOST_SERVER+"teamPlayers", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({key: teamName})
+        });
+        let data = await response.json();
+        if (data.length == 0){
+          alert("Team doesn't exist");
+        }
+        setTeamPlayers(data);
+      }catch(error){
+        console.log("error");
+      }
+    }
+
+    const clearPlayers = () =>{
+      setPlayers([]);
+    }
+    const clearStanding = () =>{
+      setStandings([]);
+    }
+    const clearTeams = () =>{
+      setTeamPlayers([]);
+    }
 
     return (
         <>
@@ -125,14 +161,27 @@ export function Documentation(){
             </code>
         </pre>
         <h3>Code Example</h3>
+
+
         <button onClick ={getStanding}>Get Standings</button>
+        <button onClick ={clearStanding}>Cleared</button>
         <pre>
             <StandingsTable standings = {standings}/>
         </pre>
+
+
         <input type="text" id="myTextBox" onChange={handleInputChange} required min ={0} placeholder="Enter number of players:" />
         <button onClick ={getPlayers}>Get Players</button>
+        <button onClick ={clearPlayers}>Cleared</button>
         <pre>
            <PlayersTable players = {players}/>
+        </pre>
+
+        <input type="text" id="myTextBox" onChange={handleInputTeamName}  placeholder="Enter team name:" />
+        <button onClick ={getTeamPlayers}>Get teams</button>
+        <button onClick ={clearTeams}>Cleared</button>
+        <pre>
+           <PlayersTable players = {teamPlayers}/>
         </pre>
         </>
     )

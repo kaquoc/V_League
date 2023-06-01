@@ -3,18 +3,30 @@
     border-collapse: collapse;
   }
   
-  .standings-table th,
-  .standings-table td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .standings-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
-  
-  .standings-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
+.standings-table th,
+.standings-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.standings-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.standings-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.demo-section{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.code-section{
+  word-wrap: break-word;
+}
+.error{
+  color: red;
+}

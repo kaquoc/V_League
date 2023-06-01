@@ -1,7 +1,9 @@
 import {useState, useEffect} from "react";
 import "./Documentation.css";
 import { HOST_SERVER } from "../config";
-
+import React  from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const StandingsTable = ({standings}) =>{
     return (
@@ -67,6 +69,22 @@ const PlayersTable = ({players}) =>{
     </div>
   );
 }
+//Component using React Syntax Highlighter to display code 
+const CodeSection = ({ code }) => {
+  return (
+    <SyntaxHighlighter language="javascript" style={materialLight}>
+      {code}
+    </SyntaxHighlighter>
+  );
+};
+
+/**
+ * 
+ * MAIN SECTION OF CODE FOR DOCUMENTATION COMPONENT
+ * 
+ * 
+ */
+
 
 export function Documentation(){
     const [standings, setStandings] = useState([]);
@@ -74,13 +92,15 @@ export function Documentation(){
     const [numPlayers,setNumPlayers] = useState("");
     const [teamPlayers, setTeamPlayers] = useState([]);
     const [teamName, setTeamName] = useState("");
+    
+    const [errorMessage1, setErrorMessage1] = useState(false);
+    const [errorMessage2, setErrorMessage2] = useState(false);
 
     const handleInputChange = (event) => {
       const value = event.target.value;
+
       setNumPlayers(value);
-      if (value < 0){
-        alert("Please enter a value larger than 0");
-      }
+
     };
 
     const handleInputTeamName = (event) =>{
@@ -88,7 +108,27 @@ export function Documentation(){
       setTeamName(value);
     }
 
+
+    const JSgetPlayers = `try {
+      const response = await fetch(HOST_SERVER/players,{
+        method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({key: #numPlayers})
+      });
+      const result = await response.text();
+      console.log(result);
+    }catch (error){
+      console.log(error);
+    }`;
+
     const getPlayers = async () =>{
+      if (numPlayers < 0){
+        setErrorMessage1(true);
+        return;
+      }
+      setErrorMessage1(false);
       try{
         let response = await fetch(HOST_SERVER+ "players", {
           method: "POST",
@@ -104,6 +144,14 @@ export function Documentation(){
       }
     };
 
+    const JSgetStanding = `try {
+      const response = await fetch(HOST_SERVER/standings,options);
+      const result = await response.text();
+      console.log(result);
+    }catch (error){
+      console.log(error);
+    }`;
+
     const getStanding = async () =>{
         try{
             let response = await fetch(HOST_SERVER+ "standings");
@@ -114,7 +162,20 @@ export function Documentation(){
             console.log("error");
         }
     };
-    
+    const JSgetTeamPlayers = `try {
+      const response = await fetch(HOST_SERVER/teamPlayers,{
+        method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({key: #teamName})
+      });
+      const result = await response.text();
+      console.log(result);
+    }catch (error){
+      console.log(error);
+    }`;
+
     const getTeamPlayers = async () => {
       try{
         let response = await fetch(HOST_SERVER+"teamPlayers", {
@@ -126,9 +187,11 @@ export function Documentation(){
         });
         let data = await response.json();
         if (data.length == 0){
-          alert("Team doesn't exist");
+          setErrorMessage2(true);
+          return;
         }
         setTeamPlayers(data);
+        setErrorMessage2(false);
       }catch(error){
         console.log("error");
       }
@@ -160,29 +223,45 @@ export function Documentation(){
             /GET/fixtures        - return all fixtures in the league for 2022/2023 season<br></br>
             </code>
         </pre>
-        <h3>Code Example</h3>
+        <h3>Demo</h3>
 
-
+        <h4>Getting current standings table</h4>
         <button onClick ={getStanding}>Get Standings</button>
         <button onClick ={clearStanding}>Cleared</button>
-        <pre>
-            <StandingsTable standings = {standings}/>
-        </pre>
-
-
+        <div className = "demo-section">
+          <CodeSection code={JSgetStanding} className = "code-section"/>
+          <pre className = "table-section">
+              <StandingsTable standings = {standings}/>
+          </pre>
+        </div>
+        
+        <h4>Getting list of players in the league with limit</h4>
         <input type="text" id="myTextBox" onChange={handleInputChange} required min ={0} placeholder="Enter number of players:" />
+        {errorMessage1 && <p className="error">Invalid value, value cannot be negative</p>}
         <button onClick ={getPlayers}>Get Players</button>
         <button onClick ={clearPlayers}>Cleared</button>
-        <pre>
-           <PlayersTable players = {players}/>
-        </pre>
+        <div className = "demo-section">
+          <CodeSection code={JSgetPlayers} className = "code-section" />
+          <pre className = "table-section">
+            <PlayersTable players = {players}/>
+          </pre>
+        </div>
 
+        <h4>Getting list of players with user inputed team name</h4>
         <input type="text" id="myTextBox" onChange={handleInputTeamName}  placeholder="Enter team name:" />
+        {errorMessage2 && <p className="error">Team doesn't exist, please check spellings, including capitalise letters</p>}
         <button onClick ={getTeamPlayers}>Get teams</button>
         <button onClick ={clearTeams}>Cleared</button>
-        <pre>
-           <PlayersTable players = {teamPlayers}/>
-        </pre>
+        <div className = "demo-section">
+          <CodeSection code={JSgetTeamPlayers} className = "code-section" />
+
+          <pre className = "table-section" >
+            <PlayersTable players = {teamPlayers}/>
+          </pre>
+        </div>
+
+        
+
         </>
     )
 }

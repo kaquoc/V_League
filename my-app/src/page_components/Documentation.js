@@ -98,7 +98,6 @@ export function Documentation(){
 
     const handleInputChange = (event) => {
       const value = event.target.value;
-
       setNumPlayers(value);
 
     };
@@ -106,6 +105,9 @@ export function Documentation(){
     const handleInputTeamName = (event) =>{
       const value = event.target.value;
       setTeamName(value);
+    }
+    const copyClipboard = (prop) => {
+      navigator.clipboard.writeText(prop);
     }
 
 
@@ -228,6 +230,7 @@ export function Documentation(){
         <h4>Getting current standings table</h4>
         <button onClick ={getStanding}>Get Standings</button>
         <button onClick ={clearStanding}>Cleared</button>
+        <button onClick = {copyClipboard(JSgetStanding)}>Copy</button>
         <div className = "demo-section">
           <CodeSection code={JSgetStanding} className = "code-section"/>
           <pre className = "table-section">
@@ -240,6 +243,7 @@ export function Documentation(){
         {errorMessage1 && <p className="error">Invalid value, value cannot be negative</p>}
         <button onClick ={getPlayers}>Get Players</button>
         <button onClick ={clearPlayers}>Cleared</button>
+        <button onClick = {copyClipboard(JSgetPlayers)}>Copy</button>
         <div className = "demo-section">
           <CodeSection code={JSgetPlayers} className = "code-section" />
           <pre className = "table-section">
@@ -252,6 +256,7 @@ export function Documentation(){
         {errorMessage2 && <p className="error">Team doesn't exist, please check spellings, including capitalise letters</p>}
         <button onClick ={getTeamPlayers}>Get teams</button>
         <button onClick ={clearTeams}>Cleared</button>
+        <button onClick = {copyClipboard(JSgetTeamPlayers)}>Copy</button>
         <div className = "demo-section">
           <CodeSection code={JSgetTeamPlayers} className = "code-section" />
 

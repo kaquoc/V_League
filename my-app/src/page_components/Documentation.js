@@ -7,7 +7,7 @@ import { materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const StandingsTable = ({standings}) =>{
     return (
-        <div>
+        <div className = "table-container">
           <h2>Standings Table</h2>
           <table className="standings-table">
             <thead>
@@ -38,7 +38,7 @@ const StandingsTable = ({standings}) =>{
 }
 const PlayersTable = ({players}) =>{
   return (
-    <div>
+    <div className = "table-container">
       <h2>Players Table</h2>
       <table className="standings-table">
         <thead>

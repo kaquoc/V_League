@@ -30,3 +30,7 @@
 .error{
   color: red;
 }
+.table-container{
+  max-height: 500px; /* Adjust the maximum height as needed */
+  overflow: auto;
+}

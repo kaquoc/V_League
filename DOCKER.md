@@ -33,3 +33,12 @@ In the run commands, the `-p` flag is used to map the host port to the container
 
 
 `-v /path/local/frontend:/app client`. This part of the command creates a volume mount, allowing the code directory on the host machine to be accessible within the container at the /app directory. This enables real-time synchronization and updates between the host machine and the running container for the backend code. 
+
+
+Some helpful links:
+
+https://docs.docker.com/get-started/02_our_app/
+
+https://docs.docker.com/engine/reference/builder/
+
+https://github.com/acantril/docker-fundamentals/blob/main/docker-compose/instructions.md

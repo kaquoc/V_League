@@ -8,6 +8,8 @@ export function Update(){
             <li>12/23/2022 - Heroku no longer allow 
                 free Postgres database, database currently being move to another storage option.</li>
             <li>01/17/2023 - Migrating database to Elephant SQL with free plan</li>
+            <li>04/03/2023 - Populate SQL database with teams and players</li>
+            <li>06/03/2023 - Dockerize API</li>
         </ul>
         </>
     )

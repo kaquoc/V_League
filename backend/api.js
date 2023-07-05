@@ -16,8 +16,6 @@ app.use(bodyParser.json());
 app.use(raw()); //middleware body parser, use to process incoming Request into JSON String
 app.use(bodyParser.urlencoded({ extended: true })); 
 
-
-
 //reponse to a HTTP GET request
 //retrieve table data from table "standings" that we created using HerokuPostgres.
 app.get("/standings", async (req,res) => {
@@ -60,7 +58,6 @@ app.post("/teamPlayers",async (req,res) => {
         console.log(error.message);
     }
 })
-
 
 //Function for testing purposes, return server Information.
 app.get("/server_info", async (reg,res) => {

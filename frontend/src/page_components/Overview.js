@@ -1,5 +1,5 @@
 import React  from 'react';
-export function Overview1(){
+export function Overview(){
     return (
         <>
             <h2>About</h2>
@@ -25,13 +25,4 @@ export function Overview1(){
     )
   }
 
-export function Overview2(){
-    return (
-      <>
-      <h2>Overview</h2>
-      <p>User can call API to return data regarding players, teams, or fixtures.</p>
-      </>
-
-    )
-  }
 

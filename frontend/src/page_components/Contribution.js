@@ -22,15 +22,39 @@ export function Contribution(){
         }
     };
 
-
-    const onChangeInput =  (e, team_name, cell) => {
+    /**Using map to store user changes in batches, when user hit save, map is send to endpoint API 
+     * Data structure: Map<team_name, Map<column,value>>
+     * 
+     * 
+     * NOT WORKING YET, INNER MAP not updated properly
+    */
+    const changes = new Map();
+    const onChangeInput =  (e, team_name, column) => {
         const {value} = e.target;
+
+
+        if (value !== ""){
+            if (changes.has(team_name)){
+                let column_map = changes.get(team_name);
+                column_map.set(column,value);
+    
+            }else{
+                let new_column = new Map();
+                new_column.set(column,value);
+                changes.set(team_name,new_column);
+            }
+            console.log(changes.values());
+        }
+
+        
+        
+
         if (value < 0){
             alert('value cannot be negative');
         }
         setSaveMode(false);
         const editData = standings.map((item) => 
-        item.team_name === team_name ? {...item, [cell]:value}: item);
+        item.team_name === team_name ? {...item, [column]:value}: item);
         setStandings(editData);
         
       
@@ -38,6 +62,11 @@ export function Contribution(){
     const toggleEditMode = () =>{
         setEditMode(!editMode);
     }
+    /**Once user hit save, frontend will send entire table queries back to backend to be process
+     * Instead of sending entire table, we keep track of the rows, and each time user click save,
+     * only send back that updated rows using the team_name keys.
+     * Granular update only
+     */
     const saved = () => {
         setSaveMode(true);
     }
@@ -54,7 +83,7 @@ export function Contribution(){
         </button>
 
         {!saveMode && <p>Warning: File not saved!</p>} 
-        
+
         <div className = "table-container">
           <h2>Standings Table</h2>
           <table className="standings-table">

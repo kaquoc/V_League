@@ -5,7 +5,7 @@ import { HOST_SERVER } from '../config';
 export function Contribution(){
     const [standings, setStandings] = useState([]);
     const [editMode, setEditMode] = useState(false);
-    const {errorMessage,setErrorMsg} = useState("");
+    const [saveMode, setSaveMode] = useState(false);
 
     useEffect(() => {
         getStanding();
@@ -25,6 +25,10 @@ export function Contribution(){
 
     const onChangeInput =  (e, team_name, cell) => {
         const {value} = e.target;
+        if (value < 0){
+            alert('value cannot be negative');
+        }
+        setSaveMode(false);
         const editData = standings.map((item) => 
         item.team_name === team_name ? {...item, [cell]:value}: item);
         setStandings(editData);
@@ -33,7 +37,9 @@ export function Contribution(){
     }
     const toggleEditMode = () =>{
         setEditMode(!editMode);
-        console.log("edit mode ", editMode);
+    }
+    const saved = () => {
+        setSaveMode(true);
     }
 
     return (
@@ -41,10 +47,14 @@ export function Contribution(){
         <h2>Contribute</h2>
         
         <button onClick={toggleEditMode}>
-          {editMode ? 'Finish Editing' : 'Edit'}
+          {editMode ? 'Finish Editing' : 'Start Editing'}
+        </button>
+        <button onClick ={saved}>
+            {saveMode? 'Saved': 'Save'}
         </button>
 
-        <p>{errorMessage}</p>
+        {!saveMode && <p>Warning: File not saved!</p>} 
+        
         <div className = "table-container">
           <h2>Standings Table</h2>
           <table className="standings-table">
@@ -66,7 +76,7 @@ export function Contribution(){
 
                     <td>
                         {editMode?
-                        <input value = {team.match_played} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "match_played")} />
+                        <input value = {team.match_played} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "match_played")}  placeholder = "0"/>
                         : team.match_played}       
                     </td>
                     <td>
@@ -75,13 +85,20 @@ export function Contribution(){
                         : team.points}
                     </td>
                     <td>
+                        {editMode?
                         <input value = {team.wins} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "wins")} placeholder = "0" />
+                        :team.wins}
                     </td>
+
                     <td>
+                        {editMode?
                         <input value = {team.draw} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "draw")} placeholder = "0" />
+                        :team.draw}
                     </td>
                     <td>
+                        {editMode?
                         <input value = {team.lose} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "lose")} placeholder = "0" />
+                        :team.lose}
                     </td>
 
                     </tr>

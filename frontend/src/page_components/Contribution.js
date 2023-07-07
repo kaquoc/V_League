@@ -4,6 +4,9 @@ import { HOST_SERVER } from '../config';
 
 export function Contribution(){
     const [standings, setStandings] = useState([]);
+    const [editMode, setEditMode] = useState(false);
+    const {errorMessage,setErrorMsg} = useState("");
+
     useEffect(() => {
         getStanding();
       }, []);
@@ -19,20 +22,29 @@ export function Contribution(){
         }
     };
 
+
     const onChangeInput =  (e, team_name, cell) => {
         const {value} = e.target;
-        console.log("name", team_name);
-        console.log("value", value);
-        console.log("cell", cell)
-        
         const editData = standings.map((item) => 
-        item.team_name === team_name ? {...item, cell:value}: item);
+        item.team_name === team_name ? {...item, [cell]:value}: item);
         setStandings(editData);
+        
+      
     }
+    const toggleEditMode = () =>{
+        setEditMode(!editMode);
+        console.log("edit mode ", editMode);
+    }
+
     return (
         <>
         <h2>Contribute</h2>
+        
+        <button onClick={toggleEditMode}>
+          {editMode ? 'Finish Editing' : 'Edit'}
+        </button>
 
+        <p>{errorMessage}</p>
         <div className = "table-container">
           <h2>Standings Table</h2>
           <table className="standings-table">
@@ -52,16 +64,26 @@ export function Contribution(){
                     <tr key={team.team_name}>
                     <td>{team.team_name}</td>
 
+                    <td>
+                        {editMode?
+                        <input value = {team.match_played} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "match_played")} />
+                        : team.match_played}       
+                    </td>
+                    <td>
+                        {editMode?
+                        <input value = {team.points} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "points")} placeholder = "0" />
+                        : team.points}
+                    </td>
+                    <td>
+                        <input value = {team.wins} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "wins")} placeholder = "0" />
+                    </td>
+                    <td>
+                        <input value = {team.draw} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "draw")} placeholder = "0" />
+                    </td>
+                    <td>
+                        <input value = {team.lose} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "lose")} placeholder = "0" />
+                    </td>
 
-                    <td>
-                        <input value = {team.team_match_played} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "team_match_played")} placeholder = "0" />
-                    </td>
-                    <td>
-                        <input value = {team.team_points} type = "text" onChange={(e) => onChangeInput(e, team.team_name, "team_points")} placeholder = "0" />
-                    </td>
-                    <td>{team.wins}</td>
-                    <td>{team.draw}</td>
-                    <td>{team.lose}</td>
                     </tr>
                 ))}
              </tbody>

@@ -1,7 +1,7 @@
 import React, {useState, useEffect}  from 'react';
 import { HOST_SERVER } from '../config';
 
-
+const changes = new Map();
 export function Contribution(){
     const [standings, setStandings] = useState([]);
     const [editMode, setEditMode] = useState(false);
@@ -28,7 +28,7 @@ export function Contribution(){
      * 
      * NOT WORKING YET, INNER MAP not updated properly
     */
-    const changes = new Map();
+    
     const onChangeInput =  (e, team_name, column) => {
         const {value} = e.target;
 
@@ -43,7 +43,7 @@ export function Contribution(){
                 new_column.set(column,value);
                 changes.set(team_name,new_column);
             }
-            console.log(changes.values());
+            
         }
 
         
@@ -69,6 +69,15 @@ export function Contribution(){
      */
     const saved = () => {
         setSaveMode(true);
+        let jsonData = {};
+        for (let [key,columns] of changes){
+            let innerJSON = {};
+            for (let [column,value] of columns){
+                innerJSON[column] = value;
+            }
+            jsonData[key] = innerJSON;
+        }
+        console.log(jsonData);
     }
 
     return (
